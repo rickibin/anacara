@@ -1,5 +1,5 @@
 //
-//  ViewController.swift
+//  OnBoardingViewController.swift
 //  ANACARA
 //
 //  Created by Ricki Bin Yamin on 12/03/20.
@@ -8,13 +8,8 @@
 
 import UIKit
 
-class ViewController: UIViewController {
-
+class OnBoardingViewController: ViewController<OnBoardingView> {
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
     }
-
-
 }
-

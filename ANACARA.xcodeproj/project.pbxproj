@@ -10,10 +10,13 @@
 		095226FB241A7E3A00874A05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095226FA241A7E3A00874A05 /* AppDelegate.swift */; };
 		095226FD241A7E3A00874A05 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095226FC241A7E3A00874A05 /* SceneDelegate.swift */; };
 		095226FF241A7E3A00874A05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095226FE241A7E3A00874A05 /* ViewController.swift */; };
-		09522702241A7E3A00874A05 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09522700241A7E3A00874A05 /* Main.storyboard */; };
 		09522705241A7E3A00874A05 /* ANACARA.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 09522703241A7E3A00874A05 /* ANACARA.xcdatamodeld */; };
 		09522707241A7E3B00874A05 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 09522706241A7E3B00874A05 /* Assets.xcassets */; };
 		0952270A241A7E3B00874A05 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09522708241A7E3B00874A05 /* LaunchScreen.storyboard */; };
+		09522717241A828600874A05 /* CGFloat+DynamicDimension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09522716241A828600874A05 /* CGFloat+DynamicDimension.swift */; };
+		09522719241A829B00874A05 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09522718241A829B00874A05 /* View.swift */; };
+		0952271C241A839800874A05 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0952271B241A839800874A05 /* OnBoardingView.swift */; };
+		0952271F241A83B200874A05 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0952271E241A83B200874A05 /* OnBoardingViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -21,11 +24,14 @@
 		095226FA241A7E3A00874A05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		095226FC241A7E3A00874A05 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
 		095226FE241A7E3A00874A05 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		09522701241A7E3A00874A05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		09522704241A7E3A00874A05 /* ANACARA.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = ANACARA.xcdatamodel; sourceTree = "<group>"; };
 		09522706241A7E3B00874A05 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		09522709241A7E3B00874A05 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		0952270B241A7E3B00874A05 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		09522716241A828600874A05 /* CGFloat+DynamicDimension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "CGFloat+DynamicDimension.swift"; sourceTree = "<group>"; };
+		09522718241A829B00874A05 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		0952271B241A839800874A05 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
+		0952271E241A83B200874A05 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,16 +64,75 @@
 		095226F9241A7E3A00874A05 /* ANACARA */ = {
 			isa = PBXGroup;
 			children = (
+				09522714241A821700874A05 /* Models */,
+				09522713241A821000874A05 /* Views */,
+				09522712241A820100874A05 /* Controllers */,
+				09522711241A81FA00874A05 /* Base */,
+				09522715241A824800874A05 /* Extension+Custom */,
 				095226FA241A7E3A00874A05 /* AppDelegate.swift */,
 				095226FC241A7E3A00874A05 /* SceneDelegate.swift */,
-				095226FE241A7E3A00874A05 /* ViewController.swift */,
-				09522700241A7E3A00874A05 /* Main.storyboard */,
 				09522706241A7E3B00874A05 /* Assets.xcassets */,
 				09522708241A7E3B00874A05 /* LaunchScreen.storyboard */,
 				0952270B241A7E3B00874A05 /* Info.plist */,
 				09522703241A7E3A00874A05 /* ANACARA.xcdatamodeld */,
 			);
 			path = ANACARA;
+			sourceTree = "<group>";
+		};
+		09522711241A81FA00874A05 /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				09522718241A829B00874A05 /* View.swift */,
+				095226FE241A7E3A00874A05 /* ViewController.swift */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		09522712241A820100874A05 /* Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				0952271D241A83A100874A05 /* OnBoardingViewController */,
+			);
+			path = Controllers;
+			sourceTree = "<group>";
+		};
+		09522713241A821000874A05 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				0952271A241A838400874A05 /* OnBoardingView */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		09522714241A821700874A05 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		09522715241A824800874A05 /* Extension+Custom */ = {
+			isa = PBXGroup;
+			children = (
+				09522716241A828600874A05 /* CGFloat+DynamicDimension.swift */,
+			);
+			path = "Extension+Custom";
+			sourceTree = "<group>";
+		};
+		0952271A241A838400874A05 /* OnBoardingView */ = {
+			isa = PBXGroup;
+			children = (
+				0952271B241A839800874A05 /* OnBoardingView.swift */,
+			);
+			path = OnBoardingView;
+			sourceTree = "<group>";
+		};
+		0952271D241A83A100874A05 /* OnBoardingViewController */ = {
+			isa = PBXGroup;
+			children = (
+				0952271E241A83B200874A05 /* OnBoardingViewController.swift */,
+			);
+			path = OnBoardingViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -130,7 +195,6 @@
 			files = (
 				0952270A241A7E3B00874A05 /* LaunchScreen.storyboard in Resources */,
 				09522707241A7E3B00874A05 /* Assets.xcassets in Resources */,
-				09522702241A7E3A00874A05 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -143,22 +207,18 @@
 			files = (
 				095226FF241A7E3A00874A05 /* ViewController.swift in Sources */,
 				095226FB241A7E3A00874A05 /* AppDelegate.swift in Sources */,
+				0952271C241A839800874A05 /* OnBoardingView.swift in Sources */,
+				0952271F241A83B200874A05 /* OnBoardingViewController.swift in Sources */,
+				09522719241A829B00874A05 /* View.swift in Sources */,
 				095226FD241A7E3A00874A05 /* SceneDelegate.swift in Sources */,
 				09522705241A7E3A00874A05 /* ANACARA.xcdatamodeld in Sources */,
+				09522717241A828600874A05 /* CGFloat+DynamicDimension.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXSourcesBuildPhase section */
 
 /* Begin PBXVariantGroup section */
-		09522700241A7E3A00874A05 /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				09522701241A7E3A00874A05 /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		09522708241A7E3B00874A05 /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
