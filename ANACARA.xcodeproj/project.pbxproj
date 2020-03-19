@@ -17,6 +17,11 @@
 		09522719241A829B00874A05 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09522718241A829B00874A05 /* View.swift */; };
 		0952271C241A839800874A05 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0952271B241A839800874A05 /* OnBoardingView.swift */; };
 		0952271F241A83B200874A05 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0952271E241A83B200874A05 /* OnBoardingViewController.swift */; };
+		09C40C3E2423B03B00811790 /* CanvasImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C40C3D2423B03B00811790 /* CanvasImageView.swift */; };
+		09C40C402423B09A00811790 /* TrainingSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C40C3F2423B09A00811790 /* TrainingSetView.swift */; };
+		09C40C432423B21500811790 /* TrainingSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C40C422423B21500811790 /* TrainingSetViewController.swift */; };
+		09C40C452423B8E800811790 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C40C442423B8E800811790 /* UIView+Extension.swift */; };
+		09C40C472423C39C00811790 /* TrainingSetViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C40C462423C39C00811790 /* TrainingSetViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -32,6 +37,11 @@
 		09522718241A829B00874A05 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		0952271B241A839800874A05 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		0952271E241A83B200874A05 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		09C40C3D2423B03B00811790 /* CanvasImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasImageView.swift; sourceTree = "<group>"; };
+		09C40C3F2423B09A00811790 /* TrainingSetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSetView.swift; sourceTree = "<group>"; };
+		09C40C422423B21500811790 /* TrainingSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSetViewController.swift; sourceTree = "<group>"; };
+		09C40C442423B8E800811790 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
+		09C40C462423C39C00811790 /* TrainingSetViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSetViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				0952271D241A83A100874A05 /* OnBoardingViewController */,
+				09C40C412423B1FB00811790 /* TrainingSetViewController */,
 			);
 			path = Controllers;
 			sourceTree = "<group>";
@@ -100,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				0952271A241A838400874A05 /* OnBoardingView */,
+				09C40C3C2423AC4800811790 /* TrainingSetView */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -115,6 +127,8 @@
 			isa = PBXGroup;
 			children = (
 				09522716241A828600874A05 /* CGFloat+DynamicDimension.swift */,
+				09C40C3D2423B03B00811790 /* CanvasImageView.swift */,
+				09C40C442423B8E800811790 /* UIView+Extension.swift */,
 			);
 			path = "Extension+Custom";
 			sourceTree = "<group>";
@@ -133,6 +147,23 @@
 				0952271E241A83B200874A05 /* OnBoardingViewController.swift */,
 			);
 			path = OnBoardingViewController;
+			sourceTree = "<group>";
+		};
+		09C40C3C2423AC4800811790 /* TrainingSetView */ = {
+			isa = PBXGroup;
+			children = (
+				09C40C3F2423B09A00811790 /* TrainingSetView.swift */,
+				09C40C462423C39C00811790 /* TrainingSetViewDelegate.swift */,
+			);
+			path = TrainingSetView;
+			sourceTree = "<group>";
+		};
+		09C40C412423B1FB00811790 /* TrainingSetViewController */ = {
+			isa = PBXGroup;
+			children = (
+				09C40C422423B21500811790 /* TrainingSetViewController.swift */,
+			);
+			path = TrainingSetViewController;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -208,9 +239,14 @@
 				095226FF241A7E3A00874A05 /* ViewController.swift in Sources */,
 				095226FB241A7E3A00874A05 /* AppDelegate.swift in Sources */,
 				0952271C241A839800874A05 /* OnBoardingView.swift in Sources */,
+				09C40C472423C39C00811790 /* TrainingSetViewDelegate.swift in Sources */,
 				0952271F241A83B200874A05 /* OnBoardingViewController.swift in Sources */,
 				09522719241A829B00874A05 /* View.swift in Sources */,
 				095226FD241A7E3A00874A05 /* SceneDelegate.swift in Sources */,
+				09C40C452423B8E800811790 /* UIView+Extension.swift in Sources */,
+				09C40C432423B21500811790 /* TrainingSetViewController.swift in Sources */,
+				09C40C3E2423B03B00811790 /* CanvasImageView.swift in Sources */,
+				09C40C402423B09A00811790 /* TrainingSetView.swift in Sources */,
 				09522705241A7E3A00874A05 /* ANACARA.xcdatamodeld in Sources */,
 				09522717241A828600874A05 /* CGFloat+DynamicDimension.swift in Sources */,
 			);
