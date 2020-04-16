@@ -17,6 +17,8 @@
 		09522719241A829B00874A05 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09522718241A829B00874A05 /* View.swift */; };
 		0952271C241A839800874A05 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0952271B241A839800874A05 /* OnBoardingView.swift */; };
 		0952271F241A83B200874A05 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0952271E241A83B200874A05 /* OnBoardingViewController.swift */; };
+		09AC44982448A05A000B6F2B /* AnimatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AC44972448A05A000B6F2B /* AnimatingButton.swift */; };
+		09AC449A2448A10A000B6F2B /* OnBoardingViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AC44992448A10A000B6F2B /* OnBoardingViewDelegate.swift */; };
 		09C40C3E2423B03B00811790 /* CanvasImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C40C3D2423B03B00811790 /* CanvasImageView.swift */; };
 		09C40C402423B09A00811790 /* TrainingSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C40C3F2423B09A00811790 /* TrainingSetView.swift */; };
 		09C40C432423B21500811790 /* TrainingSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C40C422423B21500811790 /* TrainingSetViewController.swift */; };
@@ -37,6 +39,8 @@
 		09522718241A829B00874A05 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		0952271B241A839800874A05 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		0952271E241A83B200874A05 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		09AC44972448A05A000B6F2B /* AnimatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatingButton.swift; sourceTree = "<group>"; };
+		09AC44992448A10A000B6F2B /* OnBoardingViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewDelegate.swift; sourceTree = "<group>"; };
 		09C40C3D2423B03B00811790 /* CanvasImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasImageView.swift; sourceTree = "<group>"; };
 		09C40C3F2423B09A00811790 /* TrainingSetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSetView.swift; sourceTree = "<group>"; };
 		09C40C422423B21500811790 /* TrainingSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSetViewController.swift; sourceTree = "<group>"; };
@@ -126,6 +130,7 @@
 		09522715241A824800874A05 /* Extension+Custom */ = {
 			isa = PBXGroup;
 			children = (
+				09AC44972448A05A000B6F2B /* AnimatingButton.swift */,
 				09522716241A828600874A05 /* CGFloat+DynamicDimension.swift */,
 				09C40C3D2423B03B00811790 /* CanvasImageView.swift */,
 				09C40C442423B8E800811790 /* UIView+Extension.swift */,
@@ -137,6 +142,7 @@
 			isa = PBXGroup;
 			children = (
 				0952271B241A839800874A05 /* OnBoardingView.swift */,
+				09AC44992448A10A000B6F2B /* OnBoardingViewDelegate.swift */,
 			);
 			path = OnBoardingView;
 			sourceTree = "<group>";
@@ -238,6 +244,7 @@
 			files = (
 				095226FF241A7E3A00874A05 /* ViewController.swift in Sources */,
 				095226FB241A7E3A00874A05 /* AppDelegate.swift in Sources */,
+				09AC449A2448A10A000B6F2B /* OnBoardingViewDelegate.swift in Sources */,
 				0952271C241A839800874A05 /* OnBoardingView.swift in Sources */,
 				09C40C472423C39C00811790 /* TrainingSetViewDelegate.swift in Sources */,
 				0952271F241A83B200874A05 /* OnBoardingViewController.swift in Sources */,
@@ -246,6 +253,7 @@
 				09C40C452423B8E800811790 /* UIView+Extension.swift in Sources */,
 				09C40C432423B21500811790 /* TrainingSetViewController.swift in Sources */,
 				09C40C3E2423B03B00811790 /* CanvasImageView.swift in Sources */,
+				09AC44982448A05A000B6F2B /* AnimatingButton.swift in Sources */,
 				09C40C402423B09A00811790 /* TrainingSetView.swift in Sources */,
 				09522705241A7E3A00874A05 /* ANACARA.xcdatamodeld in Sources */,
 				09522717241A828600874A05 /* CGFloat+DynamicDimension.swift in Sources */,
@@ -394,7 +402,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.erbe.ANACARA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -412,7 +420,7 @@
 				PRODUCT_BUNDLE_IDENTIFIER = com.erbe.ANACARA;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
