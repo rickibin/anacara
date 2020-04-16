@@ -17,6 +17,8 @@
 		09522719241A829B00874A05 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09522718241A829B00874A05 /* View.swift */; };
 		0952271C241A839800874A05 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0952271B241A839800874A05 /* OnBoardingView.swift */; };
 		0952271F241A83B200874A05 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0952271E241A83B200874A05 /* OnBoardingViewController.swift */; };
+		09AC449F2448A504000B6F2B /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AC449E2448A504000B6F2B /* HomeViewController.swift */; };
+		09AC44A22448A514000B6F2B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AC44A12448A514000B6F2B /* HomeView.swift */; };
 		09C40C3E2423B03B00811790 /* CanvasImageView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C40C3D2423B03B00811790 /* CanvasImageView.swift */; };
 		09C40C402423B09A00811790 /* TrainingSetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C40C3F2423B09A00811790 /* TrainingSetView.swift */; };
 		09C40C432423B21500811790 /* TrainingSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C40C422423B21500811790 /* TrainingSetViewController.swift */; };
@@ -37,6 +39,8 @@
 		09522718241A829B00874A05 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		0952271B241A839800874A05 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		0952271E241A83B200874A05 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		09AC449E2448A504000B6F2B /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		09AC44A12448A514000B6F2B /* HomeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
 		09C40C3D2423B03B00811790 /* CanvasImageView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CanvasImageView.swift; sourceTree = "<group>"; };
 		09C40C3F2423B09A00811790 /* TrainingSetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSetView.swift; sourceTree = "<group>"; };
 		09C40C422423B21500811790 /* TrainingSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSetViewController.swift; sourceTree = "<group>"; };
@@ -101,6 +105,7 @@
 		09522712241A820100874A05 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				09AC449D2448A4BB000B6F2B /* HomeViewController */,
 				0952271D241A83A100874A05 /* OnBoardingViewController */,
 				09C40C412423B1FB00811790 /* TrainingSetViewController */,
 			);
@@ -110,6 +115,7 @@
 		09522713241A821000874A05 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				09AC44A02448A50D000B6F2B /* HomeView */,
 				0952271A241A838400874A05 /* OnBoardingView */,
 				09C40C3C2423AC4800811790 /* TrainingSetView */,
 			);
@@ -147,6 +153,22 @@
 				0952271E241A83B200874A05 /* OnBoardingViewController.swift */,
 			);
 			path = OnBoardingViewController;
+			sourceTree = "<group>";
+		};
+		09AC449D2448A4BB000B6F2B /* HomeViewController */ = {
+			isa = PBXGroup;
+			children = (
+				09AC449E2448A504000B6F2B /* HomeViewController.swift */,
+			);
+			path = HomeViewController;
+			sourceTree = "<group>";
+		};
+		09AC44A02448A50D000B6F2B /* HomeView */ = {
+			isa = PBXGroup;
+			children = (
+				09AC44A12448A514000B6F2B /* HomeView.swift */,
+			);
+			path = HomeView;
 			sourceTree = "<group>";
 		};
 		09C40C3C2423AC4800811790 /* TrainingSetView */ = {
@@ -239,8 +261,10 @@
 				095226FF241A7E3A00874A05 /* ViewController.swift in Sources */,
 				095226FB241A7E3A00874A05 /* AppDelegate.swift in Sources */,
 				0952271C241A839800874A05 /* OnBoardingView.swift in Sources */,
+				09AC44A22448A514000B6F2B /* HomeView.swift in Sources */,
 				09C40C472423C39C00811790 /* TrainingSetViewDelegate.swift in Sources */,
 				0952271F241A83B200874A05 /* OnBoardingViewController.swift in Sources */,
+				09AC449F2448A504000B6F2B /* HomeViewController.swift in Sources */,
 				09522719241A829B00874A05 /* View.swift in Sources */,
 				095226FD241A7E3A00874A05 /* SceneDelegate.swift in Sources */,
 				09C40C452423B8E800811790 /* UIView+Extension.swift in Sources */,
