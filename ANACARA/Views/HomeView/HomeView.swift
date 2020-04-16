@@ -20,16 +20,57 @@ class HomeView: View {
         return label
     }()
     
+    lazy var sinauJawaButton: AnimatingButton = {
+        let button = AnimatingButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setImage(UIImage(named: "SinauJawaButton"), for: .normal)
+        button.setImage(UIImage(named: "SinauJawaButton"), for: .highlighted)
+        
+        return button
+    }()
+    
+    lazy var nulisJawaButton: AnimatingButton = {
+        let button = AnimatingButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setImage(UIImage(named: "NulisJawaButton"), for: .normal)
+        button.setImage(UIImage(named: "NulisJawaButton"), for: .highlighted)
+        
+        return button
+    }()
+    
+    lazy var wayangImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.translatesAutoresizingMaskIntoConstraints = false
+        imageView.contentMode = .scaleAspectFit
+        imageView.image = UIImage(named: "WayangHome")
+        
+        return imageView
+    }()
     
     override func setViews() {
         super.setViews()
         backgroundColor = .white
         
-        addAllSubviews(views: [titleLabel])
+        addAllSubviews(views: [titleLabel, sinauJawaButton, nulisJawaButton, wayangImageView])
         
         NSLayoutConstraint.activate([
             titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: CGFloat(45).makeDynamicH()),
-            titleLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor)
+            titleLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            
+            sinauJawaButton.widthAnchor.constraint(equalToConstant: CGFloat(367).makeDynamicW()),
+            sinauJawaButton.heightAnchor.constraint(equalToConstant: CGFloat(141).makeDynamicW()),
+            sinauJawaButton.topAnchor.constraint(equalTo: self.topAnchor, constant: CGFloat(119).makeDynamicH()),
+            sinauJawaButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            
+            nulisJawaButton.widthAnchor.constraint(equalToConstant: CGFloat(367).makeDynamicW()),
+            nulisJawaButton.heightAnchor.constraint(equalToConstant: CGFloat(141).makeDynamicW()),
+            nulisJawaButton.topAnchor.constraint(equalTo: sinauJawaButton.bottomAnchor, constant: CGFloat(18).makeDynamicH()),
+            nulisJawaButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            
+            wayangImageView.widthAnchor.constraint(equalToConstant: CGFloat(174).makeDynamicW()),
+            wayangImageView.heightAnchor.constraint(equalToConstant: CGFloat(226).makeDynamicW()),
+            wayangImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
+            wayangImageView.centerXAnchor.constraint(equalTo: self.centerXAnchor)
         ])
     }
 }
