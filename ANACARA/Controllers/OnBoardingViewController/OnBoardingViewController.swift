@@ -11,5 +11,12 @@ import UIKit
 class OnBoardingViewController: ViewController<OnBoardingView> {
     override func viewDidLoad() {
         super.viewDidLoad()
+        screenView.delegate = self
+    }
+}
+
+extension OnBoardingViewController: OnBoardingViewDelegate {
+    func nextButtonTapped(_ view: OnBoardingView, button: AnimatingButton) {
+        
     }
 }
