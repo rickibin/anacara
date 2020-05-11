@@ -10,6 +10,8 @@
 		09042A4C2469A0BB0059FFD2 /* Hanacaraka_Normal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 09042A4B2469A0BB0059FFD2 /* Hanacaraka_Normal.ttf */; };
 		09042A772469AD7F0059FFD2 /* Learn1ViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09042A762469AD7F0059FFD2 /* Learn1ViewDelegate.swift */; };
 		0904D9BA2469F32700A1444D /* Learn2ViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0904D9B92469F32700A1444D /* Learn2ViewDelegate.swift */; };
+		0904D9BC2469F6CD00A1444D /* Learn3ViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0904D9BB2469F6CD00A1444D /* Learn3ViewDelegate.swift */; };
+		0904D9BE2469F8E400A1444D /* HStack+VStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0904D9BD2469F8E400A1444D /* HStack+VStack.swift */; };
 		09285267245B309D0093809D /* Learn1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09285266245B309D0093809D /* Learn1ViewController.swift */; };
 		09285269245B30EB0093809D /* Learn1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09285268245B30EB0093809D /* Learn1View.swift */; };
 		0928526B245B31290093809D /* Learn2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0928526A245B31290093809D /* Learn2View.swift */; };
@@ -43,6 +45,8 @@
 		09042A4B2469A0BB0059FFD2 /* Hanacaraka_Normal.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Hanacaraka_Normal.ttf; sourceTree = "<group>"; };
 		09042A762469AD7F0059FFD2 /* Learn1ViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learn1ViewDelegate.swift; sourceTree = "<group>"; };
 		0904D9B92469F32700A1444D /* Learn2ViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learn2ViewDelegate.swift; sourceTree = "<group>"; };
+		0904D9BB2469F6CD00A1444D /* Learn3ViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learn3ViewDelegate.swift; sourceTree = "<group>"; };
+		0904D9BD2469F8E400A1444D /* HStack+VStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HStack+VStack.swift"; sourceTree = "<group>"; };
 		09285266245B309D0093809D /* Learn1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learn1ViewController.swift; sourceTree = "<group>"; };
 		09285268245B30EB0093809D /* Learn1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learn1View.swift; sourceTree = "<group>"; };
 		0928526A245B31290093809D /* Learn2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learn2View.swift; sourceTree = "<group>"; };
@@ -104,6 +108,7 @@
 				0928526A245B31290093809D /* Learn2View.swift */,
 				0904D9B92469F32700A1444D /* Learn2ViewDelegate.swift */,
 				0928526C245B316A0093809D /* Learn3View.swift */,
+				0904D9BB2469F6CD00A1444D /* Learn3ViewDelegate.swift */,
 				0928526E245B317F0093809D /* Learn4View.swift */,
 			);
 			path = LearnView;
@@ -189,6 +194,7 @@
 				09522716241A828600874A05 /* CGFloat+DynamicDimension.swift */,
 				09C40C3D2423B03B00811790 /* CanvasImageView.swift */,
 				09C40C442423B8E800811790 /* UIView+Extension.swift */,
+				0904D9BD2469F8E400A1444D /* HStack+VStack.swift */,
 			);
 			path = "Extension+Custom";
 			sourceTree = "<group>";
@@ -316,7 +322,9 @@
 			files = (
 				095226FF241A7E3A00874A05 /* ViewController.swift in Sources */,
 				09285273245B31A70093809D /* Learn3ViewController.swift in Sources */,
+				0904D9BC2469F6CD00A1444D /* Learn3ViewDelegate.swift in Sources */,
 				095226FB241A7E3A00874A05 /* AppDelegate.swift in Sources */,
+				0904D9BE2469F8E400A1444D /* HStack+VStack.swift in Sources */,
 				09AC449A2448A10A000B6F2B /* OnBoardingViewDelegate.swift in Sources */,
 				09AC44A82448A823000B6F2B /* HomeViewController.swift in Sources */,
 				0952271C241A839800874A05 /* OnBoardingView.swift in Sources */,
