@@ -8,9 +8,8 @@
 
 /* Begin PBXBuildFile section */
 		09042A4C2469A0BB0059FFD2 /* Hanacaraka_Normal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 09042A4B2469A0BB0059FFD2 /* Hanacaraka_Normal.ttf */; };
-		09042A4E2469A1610059FFD2 /* Testing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09042A4D2469A1610059FFD2 /* Testing.storyboard */; };
-		09042A502469A18A0059FFD2 /* TestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09042A4F2469A18A0059FFD2 /* TestingViewController.swift */; };
 		09042A772469AD7F0059FFD2 /* Learn1ViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09042A762469AD7F0059FFD2 /* Learn1ViewDelegate.swift */; };
+		0904D9BA2469F32700A1444D /* Learn2ViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0904D9B92469F32700A1444D /* Learn2ViewDelegate.swift */; };
 		09285267245B309D0093809D /* Learn1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09285266245B309D0093809D /* Learn1ViewController.swift */; };
 		09285269245B30EB0093809D /* Learn1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09285268245B30EB0093809D /* Learn1View.swift */; };
 		0928526B245B31290093809D /* Learn2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0928526A245B31290093809D /* Learn2View.swift */; };
@@ -42,9 +41,8 @@
 
 /* Begin PBXFileReference section */
 		09042A4B2469A0BB0059FFD2 /* Hanacaraka_Normal.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Hanacaraka_Normal.ttf; sourceTree = "<group>"; };
-		09042A4D2469A1610059FFD2 /* Testing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Testing.storyboard; sourceTree = "<group>"; };
-		09042A4F2469A18A0059FFD2 /* TestingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingViewController.swift; sourceTree = "<group>"; };
 		09042A762469AD7F0059FFD2 /* Learn1ViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learn1ViewDelegate.swift; sourceTree = "<group>"; };
+		0904D9B92469F32700A1444D /* Learn2ViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learn2ViewDelegate.swift; sourceTree = "<group>"; };
 		09285266245B309D0093809D /* Learn1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learn1ViewController.swift; sourceTree = "<group>"; };
 		09285268245B30EB0093809D /* Learn1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learn1View.swift; sourceTree = "<group>"; };
 		0928526A245B31290093809D /* Learn2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learn2View.swift; sourceTree = "<group>"; };
@@ -104,6 +102,7 @@
 				09285268245B30EB0093809D /* Learn1View.swift */,
 				09042A762469AD7F0059FFD2 /* Learn1ViewDelegate.swift */,
 				0928526A245B31290093809D /* Learn2View.swift */,
+				0904D9B92469F32700A1444D /* Learn2ViewDelegate.swift */,
 				0928526C245B316A0093809D /* Learn3View.swift */,
 				0928526E245B317F0093809D /* Learn4View.swift */,
 			);
@@ -141,8 +140,6 @@
 				09522708241A7E3B00874A05 /* LaunchScreen.storyboard */,
 				0952270B241A7E3B00874A05 /* Info.plist */,
 				09522703241A7E3A00874A05 /* ANACARA.xcdatamodeld */,
-				09042A4D2469A1610059FFD2 /* Testing.storyboard */,
-				09042A4F2469A18A0059FFD2 /* TestingViewController.swift */,
 			);
 			path = ANACARA;
 			sourceTree = "<group>";
@@ -307,7 +304,6 @@
 				0952270A241A7E3B00874A05 /* LaunchScreen.storyboard in Resources */,
 				09522707241A7E3B00874A05 /* Assets.xcassets in Resources */,
 				09042A4C2469A0BB0059FFD2 /* Hanacaraka_Normal.ttf in Resources */,
-				09042A4E2469A1610059FFD2 /* Testing.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -334,13 +330,13 @@
 				09285275245B31BB0093809D /* Learn4ViewController.swift in Sources */,
 				095226FD241A7E3A00874A05 /* SceneDelegate.swift in Sources */,
 				09C40C452423B8E800811790 /* UIView+Extension.swift in Sources */,
-				09042A502469A18A0059FFD2 /* TestingViewController.swift in Sources */,
 				09C40C432423B21500811790 /* TrainingSetViewController.swift in Sources */,
 				09285267245B309D0093809D /* Learn1ViewController.swift in Sources */,
 				09C40C3E2423B03B00811790 /* CanvasImageView.swift in Sources */,
 				09AC44982448A05A000B6F2B /* AnimatingButton.swift in Sources */,
 				09C40C402423B09A00811790 /* TrainingSetView.swift in Sources */,
 				0928526D245B316A0093809D /* Learn3View.swift in Sources */,
+				0904D9BA2469F32700A1444D /* Learn2ViewDelegate.swift in Sources */,
 				09AC44A52448A816000B6F2B /* HomeView.swift in Sources */,
 				09522705241A7E3A00874A05 /* ANACARA.xcdatamodeld in Sources */,
 				0928526B245B31290093809D /* Learn2View.swift in Sources */,

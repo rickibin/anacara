@@ -11,5 +11,20 @@ import UIKit
 class Learn2ViewController: ViewController<Learn2View> {
     override func viewDidLoad() {
         super.viewDidLoad()
+        screenView.delegate = self
+    }
+}
+
+extension Learn2ViewController: Learn2ViewDelegate {
+    func closeButtonTapped(_ view: View, didTapButton button: AnimatingButton) {
+        print("close tapped")
+    }
+    
+    func undoButtonTapped(_ view: View, didTapButton button: AnimatingButton) {
+        screenView.canvasImageView.clear()
+    }
+    
+    func okButtonTapped(_ view: View, didTapButton button: AnimatingButton) {
+        print("Ok tapped")
     }
 }
