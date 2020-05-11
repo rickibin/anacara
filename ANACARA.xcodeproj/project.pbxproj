@@ -10,6 +10,7 @@
 		09042A4C2469A0BB0059FFD2 /* Hanacaraka_Normal.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 09042A4B2469A0BB0059FFD2 /* Hanacaraka_Normal.ttf */; };
 		09042A4E2469A1610059FFD2 /* Testing.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 09042A4D2469A1610059FFD2 /* Testing.storyboard */; };
 		09042A502469A18A0059FFD2 /* TestingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09042A4F2469A18A0059FFD2 /* TestingViewController.swift */; };
+		09042A772469AD7F0059FFD2 /* Learn1ViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09042A762469AD7F0059FFD2 /* Learn1ViewDelegate.swift */; };
 		09285267245B309D0093809D /* Learn1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09285266245B309D0093809D /* Learn1ViewController.swift */; };
 		09285269245B30EB0093809D /* Learn1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09285268245B30EB0093809D /* Learn1View.swift */; };
 		0928526B245B31290093809D /* Learn2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0928526A245B31290093809D /* Learn2View.swift */; };
@@ -43,6 +44,7 @@
 		09042A4B2469A0BB0059FFD2 /* Hanacaraka_Normal.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Hanacaraka_Normal.ttf; sourceTree = "<group>"; };
 		09042A4D2469A1610059FFD2 /* Testing.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Testing.storyboard; sourceTree = "<group>"; };
 		09042A4F2469A18A0059FFD2 /* TestingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestingViewController.swift; sourceTree = "<group>"; };
+		09042A762469AD7F0059FFD2 /* Learn1ViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learn1ViewDelegate.swift; sourceTree = "<group>"; };
 		09285266245B309D0093809D /* Learn1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learn1ViewController.swift; sourceTree = "<group>"; };
 		09285268245B30EB0093809D /* Learn1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learn1View.swift; sourceTree = "<group>"; };
 		0928526A245B31290093809D /* Learn2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learn2View.swift; sourceTree = "<group>"; };
@@ -100,6 +102,7 @@
 			isa = PBXGroup;
 			children = (
 				09285268245B30EB0093809D /* Learn1View.swift */,
+				09042A762469AD7F0059FFD2 /* Learn1ViewDelegate.swift */,
 				0928526A245B31290093809D /* Learn2View.swift */,
 				0928526C245B316A0093809D /* Learn3View.swift */,
 				0928526E245B317F0093809D /* Learn4View.swift */,
@@ -322,6 +325,7 @@
 				09AC44A82448A823000B6F2B /* HomeViewController.swift in Sources */,
 				0952271C241A839800874A05 /* OnBoardingView.swift in Sources */,
 				09C40C472423C39C00811790 /* TrainingSetViewDelegate.swift in Sources */,
+				09042A772469AD7F0059FFD2 /* Learn1ViewDelegate.swift in Sources */,
 				09285271245B31900093809D /* Learn2ViewController.swift in Sources */,
 				0952271F241A83B200874A05 /* OnBoardingViewController.swift in Sources */,
 				09285269245B30EB0093809D /* Learn1View.swift in Sources */,

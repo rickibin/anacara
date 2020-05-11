@@ -10,6 +10,8 @@ import UIKit
 
 class Learn1View: View {
     
+    var delegate: Learn1ViewDelegate?
+    
     lazy var customNavBarView: UIView = {
         let view = UIView()
         view.translatesAutoresizingMaskIntoConstraints = false
@@ -22,6 +24,7 @@ class Learn1View: View {
         let button = AnimatingButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(named: "CloseButton"), for: .normal)
+        button.addTarget(self, action: #selector(closeButtonTapped(_:)), for: .touchUpInside)
         
         return button
     }()
@@ -94,6 +97,7 @@ class Learn1View: View {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(named: "UndoButton"), for: .normal)
         button.setImage(UIImage(named: "UndoButton"), for: .highlighted)
+        button.addTarget(self, action: #selector(undoButtonTapped(_:)), for: .touchUpInside)
         
         return button
     }()
@@ -106,6 +110,7 @@ class Learn1View: View {
         button.setTitleColor(UIColor(red: 231/255, green: 189/255, blue: 3/255, alpha: 1), for: .normal)
         button.backgroundColor = UIColor(red: 34/255, green: 50/255, blue: 87/255, alpha: 1)
         button.layer.cornerRadius = 10
+        button.addTarget(self, action: #selector(okButtonTapped(_:)), for: .touchUpInside)
         
         return button
     }()
@@ -164,5 +169,19 @@ class Learn1View: View {
             okButton.widthAnchor.constraint(equalToConstant: 370),
             okButton.heightAnchor.constraint(equalToConstant: 41)
         ])
+    }
+}
+
+extension Learn1View {
+    @objc func closeButtonTapped(_ button: AnimatingButton) {
+        delegate?.closeButtonTapped(self, didTapButton: button)
+    }
+    
+    @objc func undoButtonTapped(_ button: AnimatingButton) {
+        delegate?.undoButtonTapped(self, didTapButton: button)
+    }
+    
+    @objc func okButtonTapped(_ button: AnimatingButton) {
+        delegate?.okButtonTapped(self, didTapButton: button)
     }
 }
