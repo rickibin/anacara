@@ -39,6 +39,7 @@
 		09C40C432423B21500811790 /* TrainingSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C40C422423B21500811790 /* TrainingSetViewController.swift */; };
 		09C40C452423B8E800811790 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C40C442423B8E800811790 /* UIView+Extension.swift */; };
 		09C40C472423C39C00811790 /* TrainingSetViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C40C462423C39C00811790 /* TrainingSetViewDelegate.swift */; };
+		09FC23AF246B068400AAEF58 /* Learn4ViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FC23AE246B068400AAEF58 /* Learn4ViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -76,6 +77,7 @@
 		09C40C422423B21500811790 /* TrainingSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSetViewController.swift; sourceTree = "<group>"; };
 		09C40C442423B8E800811790 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		09C40C462423C39C00811790 /* TrainingSetViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSetViewDelegate.swift; sourceTree = "<group>"; };
+		09FC23AE246B068400AAEF58 /* Learn4ViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learn4ViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -110,6 +112,7 @@
 				0928526C245B316A0093809D /* Learn3View.swift */,
 				0904D9BB2469F6CD00A1444D /* Learn3ViewDelegate.swift */,
 				0928526E245B317F0093809D /* Learn4View.swift */,
+				09FC23AE246B068400AAEF58 /* Learn4ViewDelegate.swift */,
 			);
 			path = LearnView;
 			sourceTree = "<group>";
@@ -345,6 +348,7 @@
 				09C40C402423B09A00811790 /* TrainingSetView.swift in Sources */,
 				0928526D245B316A0093809D /* Learn3View.swift in Sources */,
 				0904D9BA2469F32700A1444D /* Learn2ViewDelegate.swift in Sources */,
+				09FC23AF246B068400AAEF58 /* Learn4ViewDelegate.swift in Sources */,
 				09AC44A52448A816000B6F2B /* HomeView.swift in Sources */,
 				09522705241A7E3A00874A05 /* ANACARA.xcdatamodeld in Sources */,
 				0928526B245B31290093809D /* Learn2View.swift in Sources */,
