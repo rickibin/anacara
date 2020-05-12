@@ -9,5 +9,7 @@
 import UIKit
 
 protocol Learn4ViewDelegate {
-    
+    func closeButtonTapped(_ view: View, didTapButton button: AnimatingButton)
+    func okButtonTapped(_ view: View, didTapButton button: AnimatingButton)
+    func answerButtonTapped(_ view: View, didTapButton button: AnimatingButton)
 }
