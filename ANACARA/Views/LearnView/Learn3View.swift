@@ -24,7 +24,7 @@ class Learn3View: View {
         let button = AnimatingButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(named: "CloseButton"), for: .normal)
-        //button.addTarget(self, action: #selector(closeButtonTapped(_:)), for: .touchUpInside)
+        button.addTarget(self, action: #selector(closeButtonTapped(_:)), for: .touchUpInside)
         
         return button
     }()
@@ -49,34 +49,23 @@ class Learn3View: View {
         return label
     }()
     
-    lazy var vStack: VStack = {
-        let stack = VStack()
-        stack.backgroundColor = .blue
-        stack.spacing = 10
+    lazy var buttonGroupView: UIView = {
+        let view = UIView()
+        view.translatesAutoresizingMaskIntoConstraints = false
         
-        return stack
-    }()
-    
-    lazy var hStackTop: HStack = {
-        let stack = HStack()
-        stack.spacing = 10
-        
-        return stack
-    }()
-    
-    lazy var hStackBottom: HStack = {
-        let stack = HStack()
-        stack.spacing = 10
-        
-        return stack
+        return view
     }()
     
     lazy var aButton: AnimatingButton = {
         let button = AnimatingButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.borderColor = UIColor(red: 151/255, green: 151/255, blue: 151/255, alpha: 1).cgColor
+        button.layer.borderWidth = 1
         button.layer.cornerRadius = 15
-        button.backgroundColor = .brown
+        button.setTitleColor(UIColor(red: 67/255, green: 67/255, blue: 67/255, alpha: 1), for: .normal)
+        button.titleLabel?.font = UIFont(name: "HanacarakaNormal", size: 90)
+        button.setTitle("a", for: .normal)
+        button.addTarget(self, action: #selector(aButtonTapped(_:)), for: .touchUpInside)
         
         return button
     }()
@@ -85,8 +74,12 @@ class Learn3View: View {
         let button = AnimatingButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.borderColor = UIColor(red: 151/255, green: 151/255, blue: 151/255, alpha: 1).cgColor
+        button.layer.borderWidth = 1
         button.layer.cornerRadius = 15
-        button.backgroundColor = .brown
+        button.setTitleColor(UIColor(red: 67/255, green: 67/255, blue: 67/255, alpha: 1), for: .normal)
+        button.titleLabel?.font = UIFont(name: "HanacarakaNormal", size: 90)
+        button.setTitle("k", for: .normal)
+        button.addTarget(self, action: #selector(bButtonTapped(_:)), for: .touchUpInside)
         
         return button
     }()
@@ -95,8 +88,12 @@ class Learn3View: View {
         let button = AnimatingButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.borderColor = UIColor(red: 151/255, green: 151/255, blue: 151/255, alpha: 1).cgColor
+        button.layer.borderWidth = 1
         button.layer.cornerRadius = 15
-        button.backgroundColor = .brown
+        button.setTitleColor(UIColor(red: 67/255, green: 67/255, blue: 67/255, alpha: 1), for: .normal)
+        button.titleLabel?.font = UIFont(name: "HanacarakaNormal", size: 90)
+        button.setTitle("r", for: .normal)
+        button.addTarget(self, action: #selector(cButtonTapped(_:)), for: .touchUpInside)
         
         return button
     }()
@@ -105,8 +102,25 @@ class Learn3View: View {
         let button = AnimatingButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.layer.borderColor = UIColor(red: 151/255, green: 151/255, blue: 151/255, alpha: 1).cgColor
+        button.layer.borderWidth = 1
         button.layer.cornerRadius = 15
-        button.backgroundColor = .brown
+        button.setTitleColor(UIColor(red: 67/255, green: 67/255, blue: 67/255, alpha: 1), for: .normal)
+        button.titleLabel?.font = UIFont(name: "HanacarakaNormal", size: 90)
+        button.setTitle("n", for: .normal)
+        button.addTarget(self, action: #selector(dButtonTapped(_:)), for: .touchUpInside)
+        
+        return button
+    }()
+    
+    lazy var okButton: AnimatingButton = {
+        let button = AnimatingButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setTitle("Lanjut", for: .normal)
+        button.titleLabel?.font = .systemFont(ofSize: 20, weight: .semibold)
+        button.setTitleColor(UIColor(red: 231/255, green: 189/255, blue: 3/255, alpha: 1), for: .normal)
+        button.backgroundColor = UIColor(red: 34/255, green: 50/255, blue: 87/255, alpha: 1)
+        button.layer.cornerRadius = 10
+        button.addTarget(self, action: #selector(okButtonTapped(_:)), for: .touchUpInside)
         
         return button
     }()
@@ -114,8 +128,9 @@ class Learn3View: View {
     override func setViews() {
         super.setViews()
         backgroundColor = .white
-        addAllSubviews(views: [customNavBarView, questionLabel, vStack])
+        addAllSubviews(views: [customNavBarView, questionLabel, buttonGroupView, okButton])
         customNavBarView.addAllSubviews(views: [closeButton, progressLabel])
+        buttonGroupView.addAllSubviews(views: [aButton, bButton, cButton, dButton])
         
         NSLayoutConstraint.activate([
             customNavBarView.topAnchor.constraint(equalTo: self.topAnchor),
@@ -134,14 +149,61 @@ class Learn3View: View {
             questionLabel.topAnchor.constraint(equalTo: customNavBarView.bottomAnchor, constant: 9),
             questionLabel.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 33),
             
-            vStack.topAnchor.constraint(equalTo: questionLabel.bottomAnchor, constant: 13),
-            vStack.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 16),
-            vStack.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -16),
-            vStack.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -124),
+            buttonGroupView.topAnchor.constraint(equalTo: questionLabel.bottomAnchor, constant: 13),
+            buttonGroupView.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 16),
+            buttonGroupView.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -16),
+            buttonGroupView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -124),
+            
+            aButton.topAnchor.constraint(equalTo: buttonGroupView.topAnchor),
+            aButton.leftAnchor.constraint(equalTo: buttonGroupView.leftAnchor),
+            aButton.widthAnchor.constraint(equalToConstant: 184),
+            aButton.heightAnchor.constraint(equalToConstant: 305),
+            
+            bButton.topAnchor.constraint(equalTo: buttonGroupView.topAnchor),
+            bButton.rightAnchor.constraint(equalTo: buttonGroupView.rightAnchor),
+            bButton.widthAnchor.constraint(equalToConstant: 184),
+            bButton.heightAnchor.constraint(equalToConstant: 305),
+            
+            cButton.leftAnchor.constraint(equalTo: buttonGroupView.leftAnchor),
+            cButton.bottomAnchor.constraint(equalTo: buttonGroupView.bottomAnchor),
+            cButton.widthAnchor.constraint(equalToConstant: 184),
+            cButton.heightAnchor.constraint(equalToConstant: 305),
+            
+            dButton.rightAnchor.constraint(equalTo: buttonGroupView.rightAnchor),
+            dButton.bottomAnchor.constraint(equalTo: buttonGroupView.bottomAnchor),
+            dButton.widthAnchor.constraint(equalToConstant: 184),
+            dButton.heightAnchor.constraint(equalToConstant: 305),
+            
+            okButton.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: -51),
+            okButton.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            okButton.widthAnchor.constraint(equalToConstant: 370),
+            okButton.heightAnchor.constraint(equalToConstant: 41)
         ])
-        
-        vStack.makeVStack([hStackTop, hStackBottom])
-        hStackTop.makeHStack([aButton, bButton])
-        hStackBottom.makeHStack([cButton, dButton])
+    }
+}
+
+extension Learn3View {
+    @objc func closeButtonTapped(_ button: AnimatingButton) {
+        delegate?.closeButtonTapped(self, didTapButton: button)
+    }
+    
+    @objc func okButtonTapped(_ button: AnimatingButton) {
+        delegate?.okButtonTapped(self, didTapButton: button)
+    }
+    
+    @objc func aButtonTapped(_ button: AnimatingButton) {
+        delegate?.aButtonTapped(self, didTapButton: button)
+    }
+    
+    @objc func bButtonTapped(_ button: AnimatingButton) {
+        delegate?.bButtonTapped(self, didTapButton: button)
+    }
+    
+    @objc func cButtonTapped(_ button: AnimatingButton) {
+        delegate?.cButtonTapped(self, didTapButton: button)
+    }
+    
+    @objc func dButtonTapped(_ button: AnimatingButton) {
+        delegate?.dButtonTapped(self, didTapButton: button)
     }
 }
