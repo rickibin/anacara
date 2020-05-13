@@ -142,7 +142,7 @@ class LearnLevelView: View {
             level3Label.topAnchor.constraint(equalTo: level3Button.bottomAnchor, constant: -2),
             level3Label.centerXAnchor.constraint(equalTo: level3Button.centerXAnchor),
             
-            level4Button.topAnchor.constraint(equalTo: level2Button.bottomAnchor, constant: 34),
+            level4Button.topAnchor.constraint(equalTo: level2Label.bottomAnchor, constant: 25),
             level4Button.rightAnchor.constraint(equalTo: self.rightAnchor, constant: -54),
             level4Button.widthAnchor.constraint(equalToConstant: 104),
             level4Button.heightAnchor.constraint(equalToConstant: 104),

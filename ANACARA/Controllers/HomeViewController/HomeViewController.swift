@@ -11,5 +11,19 @@ import UIKit
 class HomeViewController: ViewController<HomeView> {
     override func viewDidLoad() {
         super.viewDidLoad()
+        screenView.delegate = self
+    }
+}
+
+extension HomeViewController: HomeViewDelegate {
+    func sinauButtonTapped(_ view: View, didTapButton button: AnimatingButton) {
+        let vc = UINavigationController(rootViewController: LearnLevelViewController())
+        vc.modalPresentationStyle = .fullScreen
+        
+        self.present(vc, animated: true, completion: nil)
+    }
+    
+    func nulisButtonTapped(_ view: View, didTapButton button: AnimatingButton) {
+        print("nulis")
     }
 }
