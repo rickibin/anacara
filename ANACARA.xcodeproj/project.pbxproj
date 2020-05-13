@@ -30,6 +30,8 @@
 		09522719241A829B00874A05 /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09522718241A829B00874A05 /* View.swift */; };
 		0952271C241A839800874A05 /* OnBoardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0952271B241A839800874A05 /* OnBoardingView.swift */; };
 		0952271F241A83B200874A05 /* OnBoardingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0952271E241A83B200874A05 /* OnBoardingViewController.swift */; };
+		096AE20C246B8F530023A265 /* FinishedLearnViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096AE20B246B8F530023A265 /* FinishedLearnViewDelegate.swift */; };
+		096AE20E246B91C00023A265 /* FinishedLearnViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 096AE20D246B91C00023A265 /* FinishedLearnViewController.swift */; };
 		09AC44982448A05A000B6F2B /* AnimatingButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AC44972448A05A000B6F2B /* AnimatingButton.swift */; };
 		09AC449A2448A10A000B6F2B /* OnBoardingViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AC44992448A10A000B6F2B /* OnBoardingViewDelegate.swift */; };
 		09AC44A52448A816000B6F2B /* HomeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09AC44A42448A816000B6F2B /* HomeView.swift */; };
@@ -39,6 +41,7 @@
 		09C40C432423B21500811790 /* TrainingSetViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C40C422423B21500811790 /* TrainingSetViewController.swift */; };
 		09C40C452423B8E800811790 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C40C442423B8E800811790 /* UIView+Extension.swift */; };
 		09C40C472423C39C00811790 /* TrainingSetViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C40C462423C39C00811790 /* TrainingSetViewDelegate.swift */; };
+		09CD9AA8246B54E300E4ADDA /* FinishedLearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CD9AA7246B54E300E4ADDA /* FinishedLearnView.swift */; };
 		09FC23AF246B068400AAEF58 /* Learn4ViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FC23AE246B068400AAEF58 /* Learn4ViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +71,8 @@
 		09522718241A829B00874A05 /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		0952271B241A839800874A05 /* OnBoardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingView.swift; sourceTree = "<group>"; };
 		0952271E241A83B200874A05 /* OnBoardingViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewController.swift; sourceTree = "<group>"; };
+		096AE20B246B8F530023A265 /* FinishedLearnViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedLearnViewDelegate.swift; sourceTree = "<group>"; };
+		096AE20D246B91C00023A265 /* FinishedLearnViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedLearnViewController.swift; sourceTree = "<group>"; };
 		09AC44972448A05A000B6F2B /* AnimatingButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatingButton.swift; sourceTree = "<group>"; };
 		09AC44992448A10A000B6F2B /* OnBoardingViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnBoardingViewDelegate.swift; sourceTree = "<group>"; };
 		09AC44A42448A816000B6F2B /* HomeView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeView.swift; sourceTree = "<group>"; };
@@ -77,6 +82,7 @@
 		09C40C422423B21500811790 /* TrainingSetViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSetViewController.swift; sourceTree = "<group>"; };
 		09C40C442423B8E800811790 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		09C40C462423C39C00811790 /* TrainingSetViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSetViewDelegate.swift; sourceTree = "<group>"; };
+		09CD9AA7246B54E300E4ADDA /* FinishedLearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedLearnView.swift; sourceTree = "<group>"; };
 		09FC23AE246B068400AAEF58 /* Learn4ViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learn4ViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -98,6 +104,7 @@
 				09285270245B31900093809D /* Learn2ViewController.swift */,
 				09285272245B31A70093809D /* Learn3ViewController.swift */,
 				09285274245B31BB0093809D /* Learn4ViewController.swift */,
+				096AE20D246B91C00023A265 /* FinishedLearnViewController.swift */,
 			);
 			path = LearnViewController;
 			sourceTree = "<group>";
@@ -113,6 +120,8 @@
 				0904D9BB2469F6CD00A1444D /* Learn3ViewDelegate.swift */,
 				0928526E245B317F0093809D /* Learn4View.swift */,
 				09FC23AE246B068400AAEF58 /* Learn4ViewDelegate.swift */,
+				09CD9AA7246B54E300E4ADDA /* FinishedLearnView.swift */,
+				096AE20B246B8F530023A265 /* FinishedLearnViewDelegate.swift */,
 			);
 			path = LearnView;
 			sourceTree = "<group>";
@@ -330,12 +339,15 @@
 				0904D9BE2469F8E400A1444D /* HStack+VStack.swift in Sources */,
 				09AC449A2448A10A000B6F2B /* OnBoardingViewDelegate.swift in Sources */,
 				09AC44A82448A823000B6F2B /* HomeViewController.swift in Sources */,
+				096AE20E246B91C00023A265 /* FinishedLearnViewController.swift in Sources */,
 				0952271C241A839800874A05 /* OnBoardingView.swift in Sources */,
 				09C40C472423C39C00811790 /* TrainingSetViewDelegate.swift in Sources */,
 				09042A772469AD7F0059FFD2 /* Learn1ViewDelegate.swift in Sources */,
 				09285271245B31900093809D /* Learn2ViewController.swift in Sources */,
 				0952271F241A83B200874A05 /* OnBoardingViewController.swift in Sources */,
+				096AE20C246B8F530023A265 /* FinishedLearnViewDelegate.swift in Sources */,
 				09285269245B30EB0093809D /* Learn1View.swift in Sources */,
+				09CD9AA8246B54E300E4ADDA /* FinishedLearnView.swift in Sources */,
 				0928526F245B317F0093809D /* Learn4View.swift in Sources */,
 				09522719241A829B00874A05 /* View.swift in Sources */,
 				09285275245B31BB0093809D /* Learn4ViewController.swift in Sources */,
