@@ -42,6 +42,9 @@
 		09C40C452423B8E800811790 /* UIView+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C40C442423B8E800811790 /* UIView+Extension.swift */; };
 		09C40C472423C39C00811790 /* TrainingSetViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09C40C462423C39C00811790 /* TrainingSetViewDelegate.swift */; };
 		09CD9AA8246B54E300E4ADDA /* FinishedLearnView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CD9AA7246B54E300E4ADDA /* FinishedLearnView.swift */; };
+		09CED167246BFDA400F76F86 /* LearnLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CED166246BFDA400F76F86 /* LearnLevelView.swift */; };
+		09CED169246BFDB400F76F86 /* LearnLevelViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CED168246BFDB400F76F86 /* LearnLevelViewDelegate.swift */; };
+		09CED16B246BFE0800F76F86 /* LearnLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09CED16A246BFE0800F76F86 /* LearnLevelViewController.swift */; };
 		09FC23AF246B068400AAEF58 /* Learn4ViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09FC23AE246B068400AAEF58 /* Learn4ViewDelegate.swift */; };
 /* End PBXBuildFile section */
 
@@ -83,6 +86,9 @@
 		09C40C442423B8E800811790 /* UIView+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIView+Extension.swift"; sourceTree = "<group>"; };
 		09C40C462423C39C00811790 /* TrainingSetViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TrainingSetViewDelegate.swift; sourceTree = "<group>"; };
 		09CD9AA7246B54E300E4ADDA /* FinishedLearnView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedLearnView.swift; sourceTree = "<group>"; };
+		09CED166246BFDA400F76F86 /* LearnLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnLevelView.swift; sourceTree = "<group>"; };
+		09CED168246BFDB400F76F86 /* LearnLevelViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnLevelViewDelegate.swift; sourceTree = "<group>"; };
+		09CED16A246BFE0800F76F86 /* LearnLevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LearnLevelViewController.swift; sourceTree = "<group>"; };
 		09FC23AE246B068400AAEF58 /* Learn4ViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learn4ViewDelegate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -100,6 +106,7 @@
 		09285264245B30840093809D /* LearnViewController */ = {
 			isa = PBXGroup;
 			children = (
+				09CED16A246BFE0800F76F86 /* LearnLevelViewController.swift */,
 				09285266245B309D0093809D /* Learn1ViewController.swift */,
 				09285270245B31900093809D /* Learn2ViewController.swift */,
 				09285272245B31A70093809D /* Learn3ViewController.swift */,
@@ -112,6 +119,8 @@
 		09285265245B308F0093809D /* LearnView */ = {
 			isa = PBXGroup;
 			children = (
+				09CED166246BFDA400F76F86 /* LearnLevelView.swift */,
+				09CED168246BFDB400F76F86 /* LearnLevelViewDelegate.swift */,
 				09285268245B30EB0093809D /* Learn1View.swift */,
 				09042A762469AD7F0059FFD2 /* Learn1ViewDelegate.swift */,
 				0928526A245B31290093809D /* Learn2View.swift */,
@@ -338,8 +347,11 @@
 				095226FB241A7E3A00874A05 /* AppDelegate.swift in Sources */,
 				0904D9BE2469F8E400A1444D /* HStack+VStack.swift in Sources */,
 				09AC449A2448A10A000B6F2B /* OnBoardingViewDelegate.swift in Sources */,
+				09CED167246BFDA400F76F86 /* LearnLevelView.swift in Sources */,
+				09CED169246BFDB400F76F86 /* LearnLevelViewDelegate.swift in Sources */,
 				09AC44A82448A823000B6F2B /* HomeViewController.swift in Sources */,
 				096AE20E246B91C00023A265 /* FinishedLearnViewController.swift in Sources */,
+				09CED16B246BFE0800F76F86 /* LearnLevelViewController.swift in Sources */,
 				0952271C241A839800874A05 /* OnBoardingView.swift in Sources */,
 				09C40C472423C39C00811790 /* TrainingSetViewDelegate.swift in Sources */,
 				09042A772469AD7F0059FFD2 /* Learn1ViewDelegate.swift in Sources */,
