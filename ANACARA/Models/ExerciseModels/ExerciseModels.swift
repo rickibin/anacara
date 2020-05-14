@@ -11,6 +11,7 @@ import UIKit
 class ExerciseModels {
     static var models: [ExerciseFrame] = []
     static var level = 1
+    static var trueCount = 0
     
     static func getFrameIndex() -> Int? {
         for i in 0 ..< models.count {

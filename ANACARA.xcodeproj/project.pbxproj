@@ -14,6 +14,12 @@
 		0904D9BE2469F8E400A1444D /* HStack+VStack.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0904D9BD2469F8E400A1444D /* HStack+VStack.swift */; };
 		090978EA246D74AF00B9FB04 /* ExerciseModelChoices.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090978E9246D74AF00B9FB04 /* ExerciseModelChoices.swift */; };
 		090978EC246D823200B9FB04 /* AksaraJawaModel.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 090978EB246D823200B9FB04 /* AksaraJawaModel.mlmodel */; };
+		090978EF246D839C00B9FB04 /* WriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090978EE246D839C00B9FB04 /* WriteView.swift */; };
+		090978F1246D83BB00B9FB04 /* WriteViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090978F0246D83BB00B9FB04 /* WriteViewDelegate.swift */; };
+		090978F4246D847900B9FB04 /* WriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090978F3246D847900B9FB04 /* WriteViewController.swift */; };
+		090978F6246D855800B9FB04 /* WriteLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090978F5246D855800B9FB04 /* WriteLevelView.swift */; };
+		090978F8246D85A600B9FB04 /* WriteLevelViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090978F7246D85A600B9FB04 /* WriteLevelViewDelegate.swift */; };
+		090978FA246D85F000B9FB04 /* WriteLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090978F9246D85F000B9FB04 /* WriteLevelViewController.swift */; };
 		09285267245B309D0093809D /* Learn1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09285266245B309D0093809D /* Learn1ViewController.swift */; };
 		09285269245B30EB0093809D /* Learn1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09285268245B30EB0093809D /* Learn1View.swift */; };
 		0928526B245B31290093809D /* Learn2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0928526A245B31290093809D /* Learn2View.swift */; };
@@ -63,6 +69,12 @@
 		0904D9BD2469F8E400A1444D /* HStack+VStack.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "HStack+VStack.swift"; sourceTree = "<group>"; };
 		090978E9246D74AF00B9FB04 /* ExerciseModelChoices.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ExerciseModelChoices.swift; sourceTree = "<group>"; };
 		090978EB246D823200B9FB04 /* AksaraJawaModel.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = AksaraJawaModel.mlmodel; sourceTree = "<group>"; };
+		090978EE246D839C00B9FB04 /* WriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteView.swift; sourceTree = "<group>"; };
+		090978F0246D83BB00B9FB04 /* WriteViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewDelegate.swift; sourceTree = "<group>"; };
+		090978F3246D847900B9FB04 /* WriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteViewController.swift; sourceTree = "<group>"; };
+		090978F5246D855800B9FB04 /* WriteLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteLevelView.swift; sourceTree = "<group>"; };
+		090978F7246D85A600B9FB04 /* WriteLevelViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteLevelViewDelegate.swift; sourceTree = "<group>"; };
+		090978F9246D85F000B9FB04 /* WriteLevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteLevelViewController.swift; sourceTree = "<group>"; };
 		09285266245B309D0093809D /* Learn1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learn1ViewController.swift; sourceTree = "<group>"; };
 		09285268245B30EB0093809D /* Learn1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learn1View.swift; sourceTree = "<group>"; };
 		0928526A245B31290093809D /* Learn2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learn2View.swift; sourceTree = "<group>"; };
@@ -117,6 +129,26 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		090978ED246D837300B9FB04 /* WriteView */ = {
+			isa = PBXGroup;
+			children = (
+				090978F5246D855800B9FB04 /* WriteLevelView.swift */,
+				090978F7246D85A600B9FB04 /* WriteLevelViewDelegate.swift */,
+				090978EE246D839C00B9FB04 /* WriteView.swift */,
+				090978F0246D83BB00B9FB04 /* WriteViewDelegate.swift */,
+			);
+			path = WriteView;
+			sourceTree = "<group>";
+		};
+		090978F2246D846C00B9FB04 /* WriteViewController */ = {
+			isa = PBXGroup;
+			children = (
+				090978F9246D85F000B9FB04 /* WriteLevelViewController.swift */,
+				090978F3246D847900B9FB04 /* WriteViewController.swift */,
+			);
+			path = WriteViewController;
+			sourceTree = "<group>";
+		};
 		09285264245B30840093809D /* LearnViewController */ = {
 			isa = PBXGroup;
 			children = (
@@ -196,6 +228,7 @@
 		09522712241A820100874A05 /* Controllers */ = {
 			isa = PBXGroup;
 			children = (
+				090978F2246D846C00B9FB04 /* WriteViewController */,
 				09285264245B30840093809D /* LearnViewController */,
 				09AC44A62448A823000B6F2B /* HomeViewController */,
 				0952271D241A83A100874A05 /* OnBoardingViewController */,
@@ -207,6 +240,7 @@
 		09522713241A821000874A05 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				090978ED246D837300B9FB04 /* WriteView */,
 				09285265245B308F0093809D /* LearnView */,
 				09AC44A32448A816000B6F2B /* HomeView */,
 				0952271A241A838400874A05 /* OnBoardingView */,
@@ -396,12 +430,15 @@
 				09B31D85246C3C8000B4BD02 /* HomeViewDelegate.swift in Sources */,
 				09CED169246BFDB400F76F86 /* LearnLevelViewDelegate.swift in Sources */,
 				09AC44A82448A823000B6F2B /* HomeViewController.swift in Sources */,
+				090978F4246D847900B9FB04 /* WriteViewController.swift in Sources */,
 				096AE20E246B91C00023A265 /* FinishedLearnViewController.swift in Sources */,
 				09CED16B246BFE0800F76F86 /* LearnLevelViewController.swift in Sources */,
 				0952271C241A839800874A05 /* OnBoardingView.swift in Sources */,
 				09C40C472423C39C00811790 /* TrainingSetViewDelegate.swift in Sources */,
 				09042A772469AD7F0059FFD2 /* Learn1ViewDelegate.swift in Sources */,
+				090978F8246D85A600B9FB04 /* WriteLevelViewDelegate.swift in Sources */,
 				09285271245B31900093809D /* Learn2ViewController.swift in Sources */,
+				090978EF246D839C00B9FB04 /* WriteView.swift in Sources */,
 				0952271F241A83B200874A05 /* OnBoardingViewController.swift in Sources */,
 				096AE20C246B8F530023A265 /* FinishedLearnViewDelegate.swift in Sources */,
 				09285269245B30EB0093809D /* Learn1View.swift in Sources */,
@@ -409,6 +446,7 @@
 				0928526F245B317F0093809D /* Learn4View.swift in Sources */,
 				098A0F7E246D02C300D74F64 /* ExerciseFrame.swift in Sources */,
 				09522719241A829B00874A05 /* View.swift in Sources */,
+				090978F6246D855800B9FB04 /* WriteLevelView.swift in Sources */,
 				090978EC246D823200B9FB04 /* AksaraJawaModel.mlmodel in Sources */,
 				09285275245B31BB0093809D /* Learn4ViewController.swift in Sources */,
 				095226FD241A7E3A00874A05 /* SceneDelegate.swift in Sources */,
@@ -420,6 +458,8 @@
 				098A0F83246D09B000D74F64 /* ExerciseModels.swift in Sources */,
 				09AC44982448A05A000B6F2B /* AnimatingButton.swift in Sources */,
 				09C40C402423B09A00811790 /* TrainingSetView.swift in Sources */,
+				090978FA246D85F000B9FB04 /* WriteLevelViewController.swift in Sources */,
+				090978F1246D83BB00B9FB04 /* WriteViewDelegate.swift in Sources */,
 				0928526D245B316A0093809D /* Learn3View.swift in Sources */,
 				098A0F80246D035700D74F64 /* ExerciseType.swift in Sources */,
 				0904D9BA2469F32700A1444D /* Learn2ViewDelegate.swift in Sources */,

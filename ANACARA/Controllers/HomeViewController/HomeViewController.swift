@@ -24,6 +24,9 @@ extension HomeViewController: HomeViewDelegate {
     }
     
     func nulisButtonTapped(_ view: View, didTapButton button: AnimatingButton) {
-        print("nulis")
+        let vc = UINavigationController(rootViewController: WriteLevelViewController())
+        vc.modalPresentationStyle = .fullScreen
+        
+        self.present(vc, animated: true, completion: nil)
     }
 }
