@@ -14,6 +14,7 @@ struct ExerciseFrame {
     var trueLabel: String
     var choice: [String]?
     var vc: UIViewController
+    var flag: Bool
     
     init(type: ExerciseType, exerciseLabel: String, trueLabel: String, choice: [String]?) {
         self.type = type
@@ -29,5 +30,6 @@ struct ExerciseFrame {
         case .pickLatin:
             self.vc = Learn4ViewController()
         }
+        self.flag = false
     }
 }
