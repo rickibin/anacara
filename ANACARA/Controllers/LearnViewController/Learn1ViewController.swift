@@ -31,10 +31,14 @@ extension Learn1ViewController: Learn1ViewDelegate {
     }
     
     func okButtonTapped(_ view: View, didTapButton button: AnimatingButton) {
-        ExerciseModels1.models[currentIndex].flag = true
-        if let nextFrameIndex = ExerciseModels1.getFrameIndex() {
-            let vc = ExerciseModels1.models[nextFrameIndex].vc
-            navigationController?.pushViewController(vc, animated: true)
+//        ExerciseModels1.models[currentIndex].flag = true
+//        if let nextFrameIndex = ExerciseModels1.getFrameIndex() {
+//            let vc = ExerciseModels1.models[nextFrameIndex].vc
+//            navigationController?.pushViewController(vc, animated: true)
+//        }
+        let model = AksaraJawaModel()
+        if let prediction = try? model.prediction(image: screenView.canvasImageView.processedImage.toPixelBuffer()!) {
+            print(prediction.classLabel)
         }
     }
     
