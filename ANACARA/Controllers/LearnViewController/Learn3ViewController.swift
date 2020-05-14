@@ -9,19 +9,28 @@
 import UIKit
 
 class Learn3ViewController: ViewController<Learn3View> {
+    var currentIndex: Int!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         screenView.delegate = self
+        if let currentIndex = ExerciseModels1.getFrameIndex() {
+            self.currentIndex = currentIndex
+        }
     }
 }
 
 extension Learn3ViewController: Learn3ViewDelegate {
     func closeButtonTapped(_ view: View, didTapButton button: AnimatingButton) {
-        print("Close")
+        navigationController?.dismiss(animated: true, completion: nil)
     }
     
     func okButtonTapped(_ view: View, didTapButton button: AnimatingButton) {
-        print("Ok")
+        ExerciseModels1.models[currentIndex].flag = true
+        if let nextFrameIndex = ExerciseModels1.getFrameIndex() {
+            let vc = ExerciseModels1.models[nextFrameIndex].vc
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     func aButtonTapped(_ view: View, didTapButton button: AnimatingButton) {

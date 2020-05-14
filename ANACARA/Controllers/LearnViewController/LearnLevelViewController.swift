@@ -28,7 +28,10 @@ extension LearnLevelViewController: LearnLevelViewDelegate {
     }
     
     func levelButtonTapped(_ view: View, didTapButton button: AnimatingButton) {
-        print(button.tag)
+        if let nextFrameIndex = ExerciseModels1.getFrameIndex() {
+            let vc = ExerciseModels1.models[nextFrameIndex].vc
+            navigationController?.pushViewController(vc, animated: true)
+        }
     }
     
     
