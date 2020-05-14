@@ -9,5 +9,6 @@
 import UIKit
 
 protocol LearnLevelViewDelegate {
-    
+    func closeButtonTapped(_ view: View, didTapButton button: AnimatingButton)
+    func levelButtonTapped(_ view: View, didTapButton button: AnimatingButton)
 }

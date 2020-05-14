@@ -26,7 +26,7 @@ class LearnLevelView: View {
         let button = AnimatingButton()
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(named: "CloseButton"), for: .normal)
-        //button.addTarget(self, action: #selector(closeButtonTapped(_:)), for: .touchUpInside)
+        button.addTarget(self, action: #selector(closeButtonTapped(_:)), for: .touchUpInside)
         
         return button
     }()
@@ -37,6 +37,7 @@ class LearnLevelView: View {
         button.setImage(UIImage(named: "angka1button"), for: .normal)
         button.setImage(UIImage(named: "angka1button"), for: .highlighted)
         button.tag = 0
+        button.addTarget(self, action: #selector(levelButtonTapped(_:)), for: .touchUpInside)
         
         return button
     }()
@@ -56,8 +57,9 @@ class LearnLevelView: View {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(named: "angka2button"), for: .normal)
         button.setImage(UIImage(named: "angka2button"), for: .highlighted)
-        button.isEnabled = false
-        button.tag = 0
+        button.isEnabled = true
+        button.tag = 1
+        button.addTarget(self, action: #selector(levelButtonTapped(_:)), for: .touchUpInside)
         
         return button
     }()
@@ -78,8 +80,9 @@ class LearnLevelView: View {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(named: "angka3button"), for: .normal)
         button.setImage(UIImage(named: "angka3button"), for: .highlighted)
-        button.isEnabled = false
-        button.tag = 0
+        button.isEnabled = true
+        button.tag = 2
+        button.addTarget(self, action: #selector(levelButtonTapped(_:)), for: .touchUpInside)
         
         return button
     }()
@@ -100,8 +103,9 @@ class LearnLevelView: View {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(named: "angka4button"), for: .normal)
         button.setImage(UIImage(named: "angka4button"), for: .highlighted)
-        button.tag = 0
-        button.isEnabled = false
+        button.isEnabled = true
+        button.tag = 3
+        button.addTarget(self, action: #selector(levelButtonTapped(_:)), for: .touchUpInside)
         
         return button
     }()
@@ -165,5 +169,15 @@ class LearnLevelView: View {
             level4Label.topAnchor.constraint(equalTo: level4Button.bottomAnchor, constant: -2),
             level4Label.centerXAnchor.constraint(equalTo: level4Button.centerXAnchor)
         ])
+    }
+}
+
+extension LearnLevelView {
+    @objc func closeButtonTapped(_ button: AnimatingButton) {
+        delegate?.closeButtonTapped(self, didTapButton: button)
+    }
+    
+    @objc func levelButtonTapped(_ button: AnimatingButton) {
+        delegate?.levelButtonTapped(self, didTapButton: button)
     }
 }

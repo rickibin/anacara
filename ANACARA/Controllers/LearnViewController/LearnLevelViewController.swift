@@ -11,7 +11,7 @@ import UIKit
 class LearnLevelViewController: ViewController<LearnLevelView> {
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        screenView.delegate = self
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -20,4 +20,16 @@ class LearnLevelViewController: ViewController<LearnLevelView> {
         navigationController?.setNavigationBarHidden(true, animated: false)
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
     }
+}
+
+extension LearnLevelViewController: LearnLevelViewDelegate {
+    func closeButtonTapped(_ view: View, didTapButton button: AnimatingButton) {
+        navigationController?.dismiss(animated: true, completion: nil)
+    }
+    
+    func levelButtonTapped(_ view: View, didTapButton button: AnimatingButton) {
+        print(button.tag)
+    }
+    
+    
 }
