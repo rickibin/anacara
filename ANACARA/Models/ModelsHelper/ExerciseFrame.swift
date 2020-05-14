@@ -20,6 +20,7 @@ struct ExerciseFrame {
         self.type = type
         self.exerciseLabel = exerciseLabel
         self.trueLabel = trueLabel
+        self.choice = choice
         switch type {
         case .writeExample:
             self.vc = Learn1ViewController()
@@ -31,5 +32,6 @@ struct ExerciseFrame {
             self.vc = Learn4ViewController()
         }
         self.flag = false
+
     }
 }
