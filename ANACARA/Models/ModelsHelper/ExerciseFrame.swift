@@ -30,6 +30,8 @@ struct ExerciseFrame {
             self.vc = Learn3ViewController()
         case .pickLatin:
             self.vc = Learn4ViewController()
+        case .writeMenu:
+            self.vc = WriteViewController()
         }
         self.flag = false
 

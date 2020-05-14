@@ -13,4 +13,5 @@ enum ExerciseType {
     case writeOnly
     case pickAksara
     case pickLatin
+    case writeMenu
 }

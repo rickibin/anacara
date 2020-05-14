@@ -20,6 +20,8 @@
 		090978F6246D855800B9FB04 /* WriteLevelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090978F5246D855800B9FB04 /* WriteLevelView.swift */; };
 		090978F8246D85A600B9FB04 /* WriteLevelViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090978F7246D85A600B9FB04 /* WriteLevelViewDelegate.swift */; };
 		090978FA246D85F000B9FB04 /* WriteLevelViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090978F9246D85F000B9FB04 /* WriteLevelViewController.swift */; };
+		090978FC246D8C4700B9FB04 /* FinishedWriteView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090978FB246D8C4700B9FB04 /* FinishedWriteView.swift */; };
+		090978FE246D8C9400B9FB04 /* FinishedWriteViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 090978FD246D8C9400B9FB04 /* FinishedWriteViewDelegate.swift */; };
 		09285267245B309D0093809D /* Learn1ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09285266245B309D0093809D /* Learn1ViewController.swift */; };
 		09285269245B30EB0093809D /* Learn1View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09285268245B30EB0093809D /* Learn1View.swift */; };
 		0928526B245B31290093809D /* Learn2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0928526A245B31290093809D /* Learn2View.swift */; };
@@ -28,6 +30,7 @@
 		09285271245B31900093809D /* Learn2ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09285270245B31900093809D /* Learn2ViewController.swift */; };
 		09285273245B31A70093809D /* Learn3ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09285272245B31A70093809D /* Learn3ViewController.swift */; };
 		09285275245B31BB0093809D /* Learn4ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09285274245B31BB0093809D /* Learn4ViewController.swift */; };
+		0944074A246D8D7700A14FD4 /* FinishedWriteViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09440749246D8D7700A14FD4 /* FinishedWriteViewController.swift */; };
 		095226FB241A7E3A00874A05 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095226FA241A7E3A00874A05 /* AppDelegate.swift */; };
 		095226FD241A7E3A00874A05 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095226FC241A7E3A00874A05 /* SceneDelegate.swift */; };
 		095226FF241A7E3A00874A05 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 095226FE241A7E3A00874A05 /* ViewController.swift */; };
@@ -75,6 +78,8 @@
 		090978F5246D855800B9FB04 /* WriteLevelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteLevelView.swift; sourceTree = "<group>"; };
 		090978F7246D85A600B9FB04 /* WriteLevelViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteLevelViewDelegate.swift; sourceTree = "<group>"; };
 		090978F9246D85F000B9FB04 /* WriteLevelViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WriteLevelViewController.swift; sourceTree = "<group>"; };
+		090978FB246D8C4700B9FB04 /* FinishedWriteView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedWriteView.swift; sourceTree = "<group>"; };
+		090978FD246D8C9400B9FB04 /* FinishedWriteViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedWriteViewDelegate.swift; sourceTree = "<group>"; };
 		09285266245B309D0093809D /* Learn1ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learn1ViewController.swift; sourceTree = "<group>"; };
 		09285268245B30EB0093809D /* Learn1View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learn1View.swift; sourceTree = "<group>"; };
 		0928526A245B31290093809D /* Learn2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learn2View.swift; sourceTree = "<group>"; };
@@ -83,6 +88,7 @@
 		09285270245B31900093809D /* Learn2ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learn2ViewController.swift; sourceTree = "<group>"; };
 		09285272245B31A70093809D /* Learn3ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learn3ViewController.swift; sourceTree = "<group>"; };
 		09285274245B31BB0093809D /* Learn4ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Learn4ViewController.swift; sourceTree = "<group>"; };
+		09440749246D8D7700A14FD4 /* FinishedWriteViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FinishedWriteViewController.swift; sourceTree = "<group>"; };
 		095226F7241A7E3A00874A05 /* ANACARA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ANACARA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		095226FA241A7E3A00874A05 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		095226FC241A7E3A00874A05 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -136,6 +142,8 @@
 				090978F7246D85A600B9FB04 /* WriteLevelViewDelegate.swift */,
 				090978EE246D839C00B9FB04 /* WriteView.swift */,
 				090978F0246D83BB00B9FB04 /* WriteViewDelegate.swift */,
+				090978FB246D8C4700B9FB04 /* FinishedWriteView.swift */,
+				090978FD246D8C9400B9FB04 /* FinishedWriteViewDelegate.swift */,
 			);
 			path = WriteView;
 			sourceTree = "<group>";
@@ -145,6 +153,7 @@
 			children = (
 				090978F9246D85F000B9FB04 /* WriteLevelViewController.swift */,
 				090978F3246D847900B9FB04 /* WriteViewController.swift */,
+				09440749246D8D7700A14FD4 /* FinishedWriteViewController.swift */,
 			);
 			path = WriteViewController;
 			sourceTree = "<group>";
@@ -433,8 +442,10 @@
 				090978F4246D847900B9FB04 /* WriteViewController.swift in Sources */,
 				096AE20E246B91C00023A265 /* FinishedLearnViewController.swift in Sources */,
 				09CED16B246BFE0800F76F86 /* LearnLevelViewController.swift in Sources */,
+				090978FE246D8C9400B9FB04 /* FinishedWriteViewDelegate.swift in Sources */,
 				0952271C241A839800874A05 /* OnBoardingView.swift in Sources */,
 				09C40C472423C39C00811790 /* TrainingSetViewDelegate.swift in Sources */,
+				0944074A246D8D7700A14FD4 /* FinishedWriteViewController.swift in Sources */,
 				09042A772469AD7F0059FFD2 /* Learn1ViewDelegate.swift in Sources */,
 				090978F8246D85A600B9FB04 /* WriteLevelViewDelegate.swift in Sources */,
 				09285271245B31900093809D /* Learn2ViewController.swift in Sources */,
@@ -454,6 +465,7 @@
 				09C40C432423B21500811790 /* TrainingSetViewController.swift in Sources */,
 				090978EA246D74AF00B9FB04 /* ExerciseModelChoices.swift in Sources */,
 				09285267245B309D0093809D /* Learn1ViewController.swift in Sources */,
+				090978FC246D8C4700B9FB04 /* FinishedWriteView.swift in Sources */,
 				09C40C3E2423B03B00811790 /* CanvasImageView.swift in Sources */,
 				098A0F83246D09B000D74F64 /* ExerciseModels.swift in Sources */,
 				09AC44982448A05A000B6F2B /* AnimatingButton.swift in Sources */,

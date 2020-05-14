@@ -20,6 +20,7 @@ extension OnBoardingViewController: OnBoardingViewDelegate {
         let vc = HomeViewController()
         UserDefaults.standard.set(true, forKey: "OnboardingPassed")
         UserDefaults.standard.set(1, forKey: "LearnLevel")
+        UserDefaults.standard.set(1, forKey: "WriteLevel")
         vc.modalPresentationStyle = .fullScreen
         vc.modalTransitionStyle = .crossDissolve
         

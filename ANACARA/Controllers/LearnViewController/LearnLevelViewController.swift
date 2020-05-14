@@ -85,6 +85,4 @@ extension LearnLevelViewController: LearnLevelViewDelegate {
             navigationController?.pushViewController(vc, animated: true)
         }
     }
-    
-    
 }

@@ -30,4 +30,20 @@ class ExerciseModelChoices {
         ExerciseFrame(type: .pickAksara, exerciseLabel: "ta", trueLabel: "t", choice: ["k", "t", "f", "n"]),
         ExerciseFrame(type: .pickLatin, exerciseLabel: "t", trueLabel: "ta", choice: ["da", "ha", "ta"]),
     ]
+    
+    static var write1Model: [ExerciseFrame] = [
+        ExerciseFrame(type: .writeMenu, exerciseLabel: "ka", trueLabel: "k", choice: nil),
+        ExerciseFrame(type: .writeMenu, exerciseLabel: "ha", trueLabel: "a", choice: nil),
+        ExerciseFrame(type: .writeMenu, exerciseLabel: "na", trueLabel: "n", choice: nil),
+        ExerciseFrame(type: .writeMenu, exerciseLabel: "ca", trueLabel: "c", choice: nil),
+        ExerciseFrame(type: .writeMenu, exerciseLabel: "ra", trueLabel: "r", choice: nil)
+    ]
+    
+    static var write2Model: [ExerciseFrame] = [
+        ExerciseFrame(type: .writeMenu, exerciseLabel: "sa", trueLabel: "s", choice: nil),
+        ExerciseFrame(type: .writeMenu, exerciseLabel: "da", trueLabel: "f", choice: nil),
+        ExerciseFrame(type: .writeMenu, exerciseLabel: "la", trueLabel: "l", choice: nil),
+        ExerciseFrame(type: .writeMenu, exerciseLabel: "ta", trueLabel: "t", choice: nil),
+        ExerciseFrame(type: .writeMenu, exerciseLabel: "wa", trueLabel: "w", choice: nil)
+    ]
 }
