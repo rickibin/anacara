@@ -10,10 +10,14 @@ import UIKit
 
 class ExerciseModels1 {
     static var models: [ExerciseFrame] = [
-        ExerciseFrame(type: .writeExample, exerciseLabel: "ha", trueLabel: "h", choice: nil),
-        ExerciseFrame(type: .writeOnly, exerciseLabel: "ha", trueLabel: "h", choice: nil),
-        ExerciseFrame(type: .pickAksara, exerciseLabel: "ha", trueLabel: "h", choice: ["k", "h", "r", "n"]),
-        ExerciseFrame(type: .pickLatin, exerciseLabel: "h", trueLabel: "ha", choice: ["ca", "ka", "ha"])
+        ExerciseFrame(type: .writeExample, exerciseLabel: "ha", trueLabel: "a", choice: nil),
+        ExerciseFrame(type: .writeOnly, exerciseLabel: "ha", trueLabel: "a", choice: nil),
+        ExerciseFrame(type: .pickAksara, exerciseLabel: "ha", trueLabel: "a", choice: ["k", "a", "r", "n"]),
+        ExerciseFrame(type: .pickLatin, exerciseLabel: "a", trueLabel: "ha", choice: ["ca", "ka", "ha"]),
+        ExerciseFrame(type: .writeExample, exerciseLabel: "na", trueLabel: "n", choice: nil),
+        ExerciseFrame(type: .writeOnly, exerciseLabel: "na", trueLabel: "n", choice: nil),
+        ExerciseFrame(type: .pickAksara, exerciseLabel: "na", trueLabel: "n", choice: ["k", "a", "r", "n"]),
+        ExerciseFrame(type: .pickLatin, exerciseLabel: "n", trueLabel: "na", choice: ["ca", "na", "ha"]),
     ]
     
 //    static func nextFrame() -> ExerciseFrame? {
