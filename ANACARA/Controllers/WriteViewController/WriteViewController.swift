@@ -46,27 +46,43 @@ extension WriteViewController: WriteViewDelegate {
                 print(prediction.classLabel)
                 if prediction.classLabel == exerciseFrame.trueLabel {
                     // Condition if prediction match the correct value
-                    ExerciseModels.models[currentIndex].flag = true
                     ExerciseModels.trueCount += 1
-                    if let nextFrameIndex = ExerciseModels.getFrameIndex() {
-                        // Condition if next exercise is exist
-                        let vc = ExerciseModels.models[nextFrameIndex].vc
-                        navigationController?.pushViewController(vc, animated: true)
-                    }
-                    else {
-                        // Condition if next exercise is not exist, so finish the learning process
-                        let vc = FinishedWriteViewController()
-                        navigationController?.pushViewController(vc, animated: true)
-                    }
+                    
+                    let ac = UIAlertController(title: "Bener", message: "Sinaumu kasil, tulisanmu bener!", preferredStyle: .alert)
+                    ac.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
+                        ExerciseModels.models[self.currentIndex].flag = true
+                        if let nextFrameIndex = ExerciseModels.getFrameIndex() {
+                            // Condition if next exercise is exist
+                            let vc = ExerciseModels.models[nextFrameIndex].vc
+                            self.navigationController?.pushViewController(vc, animated: true)
+                        }
+                        else {
+                            // Condition if next exercise is not exist, so finish the learning process
+                            let vc = FinishedWriteViewController()
+                            self.navigationController?.pushViewController(vc, animated: true)
+                        }
+                    }))
+                    self.present(ac, animated: true, completion: nil)
                 }
                 else {
-                    // Condition if prediction doesn't match
-                    let ac = UIAlertController(title: "Baleni Maneh", message: "Tulisanmu kurang rapi utawa kurang cocok, coba baleni nulis maneh.", preferredStyle: .alert)
+                    // Condition if prediction incorrect
+                    let ac = UIAlertController(title: "Salah", message: "Mungkin tulisanmu kurang apik utawa kurang cocok, sampeyan perlu sinau maneh!", preferredStyle: .alert)
                     ac.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
-                        self.screenView.canvasImageView.clear()
+                        ExerciseModels.models[self.currentIndex].flag = true
+                        if let nextFrameIndex = ExerciseModels.getFrameIndex() {
+                            // Condition if next exercise is exist
+                            let vc = ExerciseModels.models[nextFrameIndex].vc
+                            self.navigationController?.pushViewController(vc, animated: true)
+                        }
+                        else {
+                            // Condition if next exercise is not exist, so finish the learning process
+                            let vc = FinishedWriteViewController()
+                            self.navigationController?.pushViewController(vc, animated: true)
+                        }
                     }))
-                    present(ac, animated: true, completion: nil)
+                    self.present(ac, animated: true, completion: nil)
                 }
+                
             }
         }
         else {
