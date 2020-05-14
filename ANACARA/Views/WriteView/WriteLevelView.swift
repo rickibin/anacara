@@ -1,16 +1,16 @@
 //
-//  LearnLevelView.swift
+//  WriteLevelView.swift
 //  ANACARA
 //
-//  Created by Ricki Bin Yamin on 13/05/20.
+//  Created by Ricki Bin Yamin on 14/05/20.
 //  Copyright © 2020 Ricki Bin Yamin. All rights reserved.
 //
 
 import UIKit
 
-class LearnLevelView: View {
+class WriteLevelView: View {
     
-    var delegate: LearnLevelViewDelegate?
+    var delegate: WriteLevelViewDelegate?
     
     lazy var titleLabel: UILabel = {
         let label = UILabel()
@@ -172,7 +172,7 @@ class LearnLevelView: View {
     }
 }
 
-extension LearnLevelView {
+extension WriteLevelView {
     @objc func closeButtonTapped(_ button: AnimatingButton) {
         delegate?.closeButtonTapped(self, didTapButton: button)
     }

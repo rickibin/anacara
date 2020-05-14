@@ -1,19 +1,17 @@
 //
-//  LearnLevelViewController.swift
+//  WriteLevelViewController.swift
 //  ANACARA
 //
-//  Created by Ricki Bin Yamin on 13/05/20.
+//  Created by Ricki Bin Yamin on 14/05/20.
 //  Copyright © 2020 Ricki Bin Yamin. All rights reserved.
 //
 
 import UIKit
 
-class LearnLevelViewController: ViewController<LearnLevelView> {
+class WriteLevelViewController: ViewController<WriteLevelView> {
     override func viewDidLoad() {
         super.viewDidLoad()
         screenView.delegate = self
-        
-        
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -23,7 +21,7 @@ class LearnLevelViewController: ViewController<LearnLevelView> {
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         
         // Updating View
-        if let currentLevel = UserDefaults.standard.value(forKey: "LearnLevel") as? Int {
+        if let currentLevel = UserDefaults.standard.value(forKey: "WriteLevel") as? Int {
             switch currentLevel {
             case 1:
                 screenView.level1Button.isEnabled = true
@@ -60,20 +58,22 @@ class LearnLevelViewController: ViewController<LearnLevelView> {
     }
 }
 
-extension LearnLevelViewController: LearnLevelViewDelegate {
+extension WriteLevelViewController: WriteLevelViewDelegate {
     func closeButtonTapped(_ view: View, didTapButton button: AnimatingButton) {
         navigationController?.dismiss(animated: true, completion: nil)
     }
     
     func levelButtonTapped(_ view: View, didTapButton button: AnimatingButton) {
         
+        ExerciseModels.trueCount = 0
+        
         switch button.tag {
         case 0:
-            ExerciseModels.models = ExerciseModelChoices.learn1Model
+            ExerciseModels.models = ExerciseModelChoices.write1Model
             ExerciseModels.level = 1
             break
         case 1:
-            ExerciseModels.models = ExerciseModelChoices.learn2Model
+            ExerciseModels.models = ExerciseModelChoices.write2Model
             ExerciseModels.level = 2
             break
         default:

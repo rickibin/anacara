@@ -120,6 +120,7 @@ class Learn4View: View {
         button.backgroundColor = UIColor(red: 34/255, green: 50/255, blue: 87/255, alpha: 1)
         button.layer.cornerRadius = 10
         button.addTarget(self, action: #selector(okButtonTapped(_:)), for: .touchUpInside)
+        button.isEnabled = false
         
         return button
     }()
@@ -172,6 +173,15 @@ class Learn4View: View {
             okButton.widthAnchor.constraint(equalToConstant: 370),
             okButton.heightAnchor.constraint(equalToConstant: 41)
         ])
+    }
+    
+    func clearAnswerButtonColor() {
+        aButton.layer.borderColor = UIColor(red: 151/255, green: 151/255, blue: 151/255, alpha: 1).cgColor
+        aButton.backgroundColor = .white
+        bButton.layer.borderColor = UIColor(red: 151/255, green: 151/255, blue: 151/255, alpha: 1).cgColor
+        bButton.backgroundColor = .white
+        cButton.layer.borderColor = UIColor(red: 151/255, green: 151/255, blue: 151/255, alpha: 1).cgColor
+        cButton.backgroundColor = .white
     }
 }
 

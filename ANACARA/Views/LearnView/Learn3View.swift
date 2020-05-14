@@ -65,7 +65,8 @@ class Learn3View: View {
         button.setTitleColor(UIColor(red: 67/255, green: 67/255, blue: 67/255, alpha: 1), for: .normal)
         button.titleLabel?.font = UIFont(name: "HanacarakaNormal", size: 90)
         button.setTitle("a", for: .normal)
-        button.addTarget(self, action: #selector(aButtonTapped(_:)), for: .touchUpInside)
+        button.addTarget(self, action: #selector(answerButtonTapped(_:)), for: .touchUpInside)
+        button.tag = 0
         
         return button
     }()
@@ -79,7 +80,8 @@ class Learn3View: View {
         button.setTitleColor(UIColor(red: 67/255, green: 67/255, blue: 67/255, alpha: 1), for: .normal)
         button.titleLabel?.font = UIFont(name: "HanacarakaNormal", size: 90)
         button.setTitle("k", for: .normal)
-        button.addTarget(self, action: #selector(bButtonTapped(_:)), for: .touchUpInside)
+        button.addTarget(self, action: #selector(answerButtonTapped(_:)), for: .touchUpInside)
+        button.tag = 1
         
         return button
     }()
@@ -93,7 +95,8 @@ class Learn3View: View {
         button.setTitleColor(UIColor(red: 67/255, green: 67/255, blue: 67/255, alpha: 1), for: .normal)
         button.titleLabel?.font = UIFont(name: "HanacarakaNormal", size: 90)
         button.setTitle("r", for: .normal)
-        button.addTarget(self, action: #selector(cButtonTapped(_:)), for: .touchUpInside)
+        button.addTarget(self, action: #selector(answerButtonTapped(_:)), for: .touchUpInside)
+        button.tag = 2
         
         return button
     }()
@@ -107,7 +110,8 @@ class Learn3View: View {
         button.setTitleColor(UIColor(red: 67/255, green: 67/255, blue: 67/255, alpha: 1), for: .normal)
         button.titleLabel?.font = UIFont(name: "HanacarakaNormal", size: 90)
         button.setTitle("n", for: .normal)
-        button.addTarget(self, action: #selector(dButtonTapped(_:)), for: .touchUpInside)
+        button.addTarget(self, action: #selector(answerButtonTapped(_:)), for: .touchUpInside)
+        button.tag = 3
         
         return button
     }()
@@ -121,6 +125,7 @@ class Learn3View: View {
         button.backgroundColor = UIColor(red: 34/255, green: 50/255, blue: 87/255, alpha: 1)
         button.layer.cornerRadius = 10
         button.addTarget(self, action: #selector(okButtonTapped(_:)), for: .touchUpInside)
+        button.isEnabled = false
         
         return button
     }()
@@ -180,6 +185,17 @@ class Learn3View: View {
             okButton.heightAnchor.constraint(equalToConstant: 41)
         ])
     }
+    
+    func clearAnswerButtonColor() {
+        aButton.layer.borderColor = UIColor(red: 151/255, green: 151/255, blue: 151/255, alpha: 1).cgColor
+        aButton.backgroundColor = .white
+        bButton.layer.borderColor = UIColor(red: 151/255, green: 151/255, blue: 151/255, alpha: 1).cgColor
+        bButton.backgroundColor = .white
+        cButton.layer.borderColor = UIColor(red: 151/255, green: 151/255, blue: 151/255, alpha: 1).cgColor
+        cButton.backgroundColor = .white
+        dButton.layer.borderColor = UIColor(red: 151/255, green: 151/255, blue: 151/255, alpha: 1).cgColor
+        dButton.backgroundColor = .white
+    }
 }
 
 extension Learn3View {
@@ -191,19 +207,7 @@ extension Learn3View {
         delegate?.okButtonTapped(self, didTapButton: button)
     }
     
-    @objc func aButtonTapped(_ button: AnimatingButton) {
-        delegate?.aButtonTapped(self, didTapButton: button)
-    }
-    
-    @objc func bButtonTapped(_ button: AnimatingButton) {
-        delegate?.bButtonTapped(self, didTapButton: button)
-    }
-    
-    @objc func cButtonTapped(_ button: AnimatingButton) {
-        delegate?.cButtonTapped(self, didTapButton: button)
-    }
-    
-    @objc func dButtonTapped(_ button: AnimatingButton) {
-        delegate?.dButtonTapped(self, didTapButton: button)
+    @objc func answerButtonTapped(_ button: AnimatingButton) {
+        delegate?.answerButtonTapped(self, didTapButton: button)
     }
 }

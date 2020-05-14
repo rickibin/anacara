@@ -10,6 +10,8 @@ import UIKit
 
 class HomeView: View {
     
+    var delegate: HomeViewDelegate?
+    
     lazy var titleLabel: UILabel = {
         let label = UILabel()
         label.translatesAutoresizingMaskIntoConstraints = false
@@ -25,6 +27,7 @@ class HomeView: View {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(named: "SinauJawaButton"), for: .normal)
         button.setImage(UIImage(named: "SinauJawaButton"), for: .highlighted)
+        button.addTarget(self, action: #selector(sinauButtonTapped(_:)), for: .touchUpInside)
         
         return button
     }()
@@ -34,6 +37,7 @@ class HomeView: View {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(named: "NulisJawaButton"), for: .normal)
         button.setImage(UIImage(named: "NulisJawaButton"), for: .highlighted)
+        button.addTarget(self, action: #selector(nulisButtonTapped(_:)), for: .touchUpInside)
         
         return button
     }()
@@ -54,7 +58,7 @@ class HomeView: View {
         addAllSubviews(views: [titleLabel, sinauJawaButton, nulisJawaButton, wayangImageView])
         
         NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: CGFloat(45).makeDynamicH()),
+            titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 60),
             titleLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             
             sinauJawaButton.widthAnchor.constraint(equalToConstant: CGFloat(367).makeDynamicW()),
@@ -72,5 +76,15 @@ class HomeView: View {
             wayangImageView.bottomAnchor.constraint(equalTo: self.bottomAnchor),
             wayangImageView.centerXAnchor.constraint(equalTo: self.centerXAnchor)
         ])
+    }
+}
+
+extension HomeView {
+    @objc func sinauButtonTapped(_ button: AnimatingButton) {
+        delegate?.sinauButtonTapped(self, didTapButton: button)
+    }
+    
+    @objc func nulisButtonTapped(_ button: AnimatingButton) {
+        delegate?.nulisButtonTapped(self, didTapButton: button)
     }
 }
