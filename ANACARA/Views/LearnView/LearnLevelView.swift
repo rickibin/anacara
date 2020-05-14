@@ -22,6 +22,15 @@ class LearnLevelView: View {
         return label
     }()
     
+    lazy var closeButton: AnimatingButton = {
+        let button = AnimatingButton()
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.setImage(UIImage(named: "CloseButton"), for: .normal)
+        //button.addTarget(self, action: #selector(closeButtonTapped(_:)), for: .touchUpInside)
+        
+        return button
+    }()
+    
     lazy var level1Button: AnimatingButton = {
         let button = AnimatingButton()
         button.translatesAutoresizingMaskIntoConstraints = false
@@ -112,11 +121,17 @@ class LearnLevelView: View {
         super.setViews()
         backgroundColor = .white
         
-        addAllSubviews(views: [titleLabel, level1Button, level1Label, level2Button, level2Label, level3Button, level3Label, level4Button, level4Label])
+        addAllSubviews(views: [titleLabel, closeButton, level1Button, level1Label, level2Button, level2Label, level3Button, level3Label, level4Button, level4Label])
         
         NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 45),
+            titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 60),
+            //titleLabel.centerYAnchor.constraint(equalTo: closeButton.centerYAnchor),
             titleLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
+            
+            closeButton.topAnchor.constraint(equalTo: self.topAnchor, constant: 61),
+            closeButton.leftAnchor.constraint(equalTo: self.leftAnchor, constant: 33),
+            closeButton.widthAnchor.constraint(equalToConstant: 34),
+            closeButton.heightAnchor.constraint(equalToConstant: 34),
             
             level1Button.topAnchor.constraint(equalTo: titleLabel.bottomAnchor, constant: 34),
             level1Button.centerXAnchor.constraint(equalTo: self.centerXAnchor),

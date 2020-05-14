@@ -58,7 +58,7 @@ class HomeView: View {
         addAllSubviews(views: [titleLabel, sinauJawaButton, nulisJawaButton, wayangImageView])
         
         NSLayoutConstraint.activate([
-            titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: CGFloat(45).makeDynamicH()),
+            titleLabel.topAnchor.constraint(equalTo: self.topAnchor, constant: 60),
             titleLabel.centerXAnchor.constraint(equalTo: self.centerXAnchor),
             
             sinauJawaButton.widthAnchor.constraint(equalToConstant: CGFloat(367).makeDynamicW()),
