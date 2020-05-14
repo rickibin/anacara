@@ -57,7 +57,7 @@ class LearnLevelView: View {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(named: "angka2button"), for: .normal)
         button.setImage(UIImage(named: "angka2button"), for: .highlighted)
-        button.isEnabled = true
+        button.isEnabled = false
         button.tag = 1
         button.addTarget(self, action: #selector(levelButtonTapped(_:)), for: .touchUpInside)
         
@@ -80,7 +80,7 @@ class LearnLevelView: View {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(named: "angka3button"), for: .normal)
         button.setImage(UIImage(named: "angka3button"), for: .highlighted)
-        button.isEnabled = true
+        button.isEnabled = false
         button.tag = 2
         button.addTarget(self, action: #selector(levelButtonTapped(_:)), for: .touchUpInside)
         
@@ -103,7 +103,7 @@ class LearnLevelView: View {
         button.translatesAutoresizingMaskIntoConstraints = false
         button.setImage(UIImage(named: "angka4button"), for: .normal)
         button.setImage(UIImage(named: "angka4button"), for: .highlighted)
-        button.isEnabled = true
+        button.isEnabled = false
         button.tag = 3
         button.addTarget(self, action: #selector(levelButtonTapped(_:)), for: .touchUpInside)
         

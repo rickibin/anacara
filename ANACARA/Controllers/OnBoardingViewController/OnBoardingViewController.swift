@@ -19,6 +19,7 @@ extension OnBoardingViewController: OnBoardingViewDelegate {
     func nextButtonTapped(_ view: OnBoardingView, button: AnimatingButton) {
         let vc = HomeViewController()
         UserDefaults.standard.set(true, forKey: "OnboardingPassed")
+        UserDefaults.standard.set(1, forKey: "LearnLevel")
         vc.modalPresentationStyle = .fullScreen
         vc.modalTransitionStyle = .crossDissolve
         

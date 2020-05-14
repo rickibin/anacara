@@ -17,10 +17,10 @@ class Learn4ViewController: ViewController<Learn4View> {
     override func viewDidLoad() {
         super.viewDidLoad()
         screenView.delegate = self
-        if let currentIndex = ExerciseModels1.getFrameIndex() {
+        if let currentIndex = ExerciseModels.getFrameIndex() {
             self.currentIndex = currentIndex
-            self.exerciseFrame = ExerciseModels1.models[currentIndex]
-            screenView.progressLabel.text = "\(currentIndex+1)/\(ExerciseModels1.models.count)"
+            self.exerciseFrame = ExerciseModels.models[currentIndex]
+            screenView.progressLabel.text = "\(currentIndex+1)/\(ExerciseModels.models.count)"
         }
         
         // Updating View
@@ -37,13 +37,13 @@ extension Learn4ViewController: Learn4ViewDelegate {
     }
     
     func okButtonTapped(_ view: View, didTapButton button: AnimatingButton) {
-        ExerciseModels1.models[currentIndex].flag = true
+        ExerciseModels.models[currentIndex].flag = true
         if selectedChoice == exerciseFrame.trueLabel {
             // Condition if the answer is correct
-            ExerciseModels1.models[currentIndex].flag = true
-            if let nextFrameIndex = ExerciseModels1.getFrameIndex() {
+            ExerciseModels.models[currentIndex].flag = true
+            if let nextFrameIndex = ExerciseModels.getFrameIndex() {
                 // Condition if next exercise is exist
-                let vc = ExerciseModels1.models[nextFrameIndex].vc
+                let vc = ExerciseModels.models[nextFrameIndex].vc
                 navigationController?.pushViewController(vc, animated: true)
             }
             else {

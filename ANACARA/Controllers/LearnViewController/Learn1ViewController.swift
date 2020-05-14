@@ -16,10 +16,10 @@ class Learn1ViewController: ViewController<Learn1View> {
     override func viewDidLoad() {
         super.viewDidLoad()
         screenView.delegate = self
-        if let currentIndex = ExerciseModels1.getFrameIndex() {
+        if let currentIndex = ExerciseModels.getFrameIndex() {
             self.currentIndex = currentIndex
-            self.exerciseFrame = ExerciseModels1.models[currentIndex]
-            screenView.progressLabel.text = "\(currentIndex+1)/\(ExerciseModels1.models.count)"
+            self.exerciseFrame = ExerciseModels.models[currentIndex]
+            screenView.progressLabel.text = "\(currentIndex+1)/\(ExerciseModels.models.count)"
         }
         
         // Updating the view
@@ -47,10 +47,10 @@ extension Learn1ViewController: Learn1ViewDelegate {
                 print(prediction.classLabel)
                 if prediction.classLabel == exerciseFrame.trueLabel {
                     // Condition if prediction match the correct value
-                    ExerciseModels1.models[currentIndex].flag = true
-                    if let nextFrameIndex = ExerciseModels1.getFrameIndex() {
+                    ExerciseModels.models[currentIndex].flag = true
+                    if let nextFrameIndex = ExerciseModels.getFrameIndex() {
                         // Condition if next exercise is exist
-                        let vc = ExerciseModels1.models[nextFrameIndex].vc
+                        let vc = ExerciseModels.models[nextFrameIndex].vc
                         navigationController?.pushViewController(vc, animated: true)
                     }
                     else {
