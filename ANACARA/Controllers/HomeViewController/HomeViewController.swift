@@ -23,6 +23,11 @@ class HomeViewController: ViewController<HomeView> {
         playSound(name: "background")
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        player?.stop()
+    }
+    
     func playSound(name: String) {
         guard let url = Bundle.main.url(forResource: name, withExtension: "mp3") else { return }
 
@@ -47,8 +52,15 @@ class HomeViewController: ViewController<HomeView> {
 }
 
 extension HomeViewController: HomeViewDelegate {
-    func sinauButtonTapped(_ view: View, didTapButton button: AnimatingButton) {
+    func sinauButtonHighlighted(_ view: View, didHighlightButton button: AnimatingButton) {
         playSound(name: "button")
+    }
+    
+    func nulisButtonHighlighted(_ view: View, didHighlightButton button: AnimatingButton) {
+        playSound(name: "button")
+    }
+    
+    func sinauButtonTapped(_ view: View, didTapButton button: AnimatingButton) {
         let vc = UINavigationController(rootViewController: LearnLevelViewController())
         vc.modalPresentationStyle = .fullScreen
         
@@ -56,7 +68,6 @@ extension HomeViewController: HomeViewDelegate {
     }
     
     func nulisButtonTapped(_ view: View, didTapButton button: AnimatingButton) {
-        playSound(name: "button")
         let vc = UINavigationController(rootViewController: WriteLevelViewController())
         vc.modalPresentationStyle = .fullScreen
         

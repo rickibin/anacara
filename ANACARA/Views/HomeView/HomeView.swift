@@ -28,6 +28,7 @@ class HomeView: View {
         button.setImage(UIImage(named: "SinauJawaButton"), for: .normal)
         button.setImage(UIImage(named: "SinauJawaButton"), for: .highlighted)
         button.addTarget(self, action: #selector(sinauButtonTapped(_:)), for: .touchUpInside)
+        button.addTarget(self, action: #selector(sinauButtonHighlighted(_:)), for: .touchDown)
         
         return button
     }()
@@ -38,6 +39,7 @@ class HomeView: View {
         button.setImage(UIImage(named: "NulisJawaButton"), for: .normal)
         button.setImage(UIImage(named: "NulisJawaButton"), for: .highlighted)
         button.addTarget(self, action: #selector(nulisButtonTapped(_:)), for: .touchUpInside)
+        button.addTarget(self, action: #selector(nulisButtonHighlighted(_:)), for: .touchDown)
         
         return button
     }()
@@ -84,7 +86,15 @@ extension HomeView {
         delegate?.sinauButtonTapped(self, didTapButton: button)
     }
     
+    @objc func sinauButtonHighlighted(_ button: AnimatingButton) {
+        delegate?.sinauButtonHighlighted(self, didHighlightButton: button)
+    }
+    
     @objc func nulisButtonTapped(_ button: AnimatingButton) {
         delegate?.nulisButtonTapped(self, didTapButton: button)
+    }
+    
+    @objc func nulisButtonHighlighted(_ button: AnimatingButton) {
+        delegate?.nulisButtonHighlighted(self, didHighlightButton: button)
     }
 }

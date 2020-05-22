@@ -24,6 +24,9 @@ class WriteLevelViewController: ViewController<WriteLevelView> {
         navigationController?.setNavigationBarHidden(true, animated: false)
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
         
+        // Play Sound
+        playSound(name: "background1")
+        
         // Updating View
         if let currentLevel = UserDefaults.standard.value(forKey: "WriteLevel") as? Int {
             switch currentLevel {
@@ -61,6 +64,11 @@ class WriteLevelViewController: ViewController<WriteLevelView> {
         }
     }
     
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        player?.stop()
+    }
+    
     func playSound(name: String) {
         guard let url = Bundle.main.url(forResource: name, withExtension: "mp3") else { return }
 
@@ -90,7 +98,7 @@ extension WriteLevelViewController: WriteLevelViewDelegate {
     }
     
     func levelButtonTapped(_ view: View, didTapButton button: AnimatingButton) {
-        
+        playSound(name: "button")
         ExerciseModels.trueCount = 0
         
         switch button.tag {
