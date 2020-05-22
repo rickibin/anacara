@@ -69,12 +69,13 @@ extension WriteViewController: WriteViewDelegate {
             let model = AksaraJawaModel()
             if let prediction = try? model.prediction(image: canvasResult.toPixelBuffer()!) {
                 print(prediction.classLabel)
+                print(prediction.classLabelProbs[prediction.classLabel] ?? 1)
                 if prediction.classLabel == exerciseFrame.trueLabel {
                     // Condition if prediction match the correct value
                     playSound(name: "clap")
                     ExerciseModels.trueCount += 1
                     
-                    let ac = UIAlertController(title: "Bener", message: "Sinaumu kasil, tulisanmu bener!", preferredStyle: .alert)
+                    let ac = UIAlertController(title: "Bener", message: "Sinaumu kasil, tulisanmu bener! \nCocok \(String(format: "%.2f", (prediction.classLabelProbs[prediction.classLabel] ?? 1) * 100))%", preferredStyle: .alert)
                     ac.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
                         ExerciseModels.models[self.currentIndex].flag = true
                         if let nextFrameIndex = ExerciseModels.getFrameIndex() {
