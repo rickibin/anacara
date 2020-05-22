@@ -7,8 +7,12 @@
 //
 
 import UIKit
+import AVFoundation
 
 class WriteLevelViewController: ViewController<WriteLevelView> {
+    
+    var player: AVAudioPlayer?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         screenView.delegate = self
@@ -19,6 +23,9 @@ class WriteLevelViewController: ViewController<WriteLevelView> {
         print("Viewwillappear")
         navigationController?.setNavigationBarHidden(true, animated: false)
         navigationController?.interactivePopGestureRecognizer?.isEnabled = false
+        
+        // Play Sound
+        playSound(name: "background1")
         
         // Updating View
         if let currentLevel = UserDefaults.standard.value(forKey: "WriteLevel") as? Int {
@@ -56,6 +63,33 @@ class WriteLevelViewController: ViewController<WriteLevelView> {
             }
         }
     }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        player?.stop()
+    }
+    
+    func playSound(name: String) {
+        guard let url = Bundle.main.url(forResource: name, withExtension: "mp3") else { return }
+
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+
+            /* The following line is required for the player to work on iOS 11. Change the file type accordingly*/
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+
+            /* iOS 10 and earlier require the following line:
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3) */
+
+            guard let player = player else { return }
+
+            player.play()
+
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
 }
 
 extension WriteLevelViewController: WriteLevelViewDelegate {
@@ -64,7 +98,7 @@ extension WriteLevelViewController: WriteLevelViewDelegate {
     }
     
     func levelButtonTapped(_ view: View, didTapButton button: AnimatingButton) {
-        
+        playSound(name: "button")
         ExerciseModels.trueCount = 0
         
         switch button.tag {

@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import AVFoundation
 
 class Learn2ViewController: ViewController<Learn2View> {
+    
+    var player: AVAudioPlayer?
     
     var currentIndex: Int!
     var exerciseFrame: ExerciseFrame!
@@ -24,6 +27,28 @@ class Learn2ViewController: ViewController<Learn2View> {
         
         // Updating view
         screenView.questionLabel.text = "Tulis aksara jawa kanggo \"\(exerciseFrame.exerciseLabel)\""
+    }
+    
+    func playSound(name: String) {
+        guard let url = Bundle.main.url(forResource: name, withExtension: "mp3") else { return }
+
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+
+            /* The following line is required for the player to work on iOS 11. Change the file type accordingly*/
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+
+            /* iOS 10 and earlier require the following line:
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3) */
+
+            guard let player = player else { return }
+
+            player.play()
+
+        } catch let error {
+            print(error.localizedDescription)
+        }
     }
 }
 
@@ -45,6 +70,7 @@ extension Learn2ViewController: Learn2ViewDelegate {
                 print(prediction.classLabel)
                 if prediction.classLabel == exerciseFrame.trueLabel {
                     // Condition if prediction match the correct value
+                    playSound(name: "clap")
                     ExerciseModels.models[currentIndex].flag = true
                     if let nextFrameIndex = ExerciseModels.getFrameIndex() {
                         // Condition if next exercise is exist
@@ -59,6 +85,7 @@ extension Learn2ViewController: Learn2ViewDelegate {
                 }
                 else {
                     // Condition if prediction doesn't match
+                    playSound(name: "alert")
                     let ac = UIAlertController(title: "Baleni Maneh", message: "Tulisanmu kurang rapi utawa kurang cocok, coba baleni nulis maneh.", preferredStyle: .alert)
                     ac.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
                         self.screenView.canvasImageView.clear()

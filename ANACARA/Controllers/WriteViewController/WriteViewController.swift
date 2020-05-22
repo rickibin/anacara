@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import AVFoundation
 
 class WriteViewController: ViewController<WriteView> {
+    
+    var player: AVAudioPlayer?
     
     var currentIndex: Int!
     var exerciseFrame: ExerciseFrame!
@@ -24,6 +27,28 @@ class WriteViewController: ViewController<WriteView> {
         
         // Updating view
         screenView.questionLabel.text = "Tulis aksara jawa kanggo \"\(exerciseFrame.exerciseLabel)\""
+    }
+    
+    func playSound(name: String) {
+        guard let url = Bundle.main.url(forResource: name, withExtension: "mp3") else { return }
+
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+
+            /* The following line is required for the player to work on iOS 11. Change the file type accordingly*/
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+
+            /* iOS 10 and earlier require the following line:
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3) */
+
+            guard let player = player else { return }
+
+            player.play()
+
+        } catch let error {
+            print(error.localizedDescription)
+        }
     }
 }
 
@@ -44,11 +69,13 @@ extension WriteViewController: WriteViewDelegate {
             let model = AksaraJawaModel()
             if let prediction = try? model.prediction(image: canvasResult.toPixelBuffer()!) {
                 print(prediction.classLabel)
+                print(prediction.classLabelProbs[prediction.classLabel] ?? 1)
                 if prediction.classLabel == exerciseFrame.trueLabel {
                     // Condition if prediction match the correct value
+                    playSound(name: "clap")
                     ExerciseModels.trueCount += 1
                     
-                    let ac = UIAlertController(title: "Bener", message: "Sinaumu kasil, tulisanmu bener!", preferredStyle: .alert)
+                    let ac = UIAlertController(title: "Bener", message: "Sinaumu kasil, tulisanmu bener! \nCocok \(String(format: "%.2f", (prediction.classLabelProbs[prediction.classLabel] ?? 1) * 100))%", preferredStyle: .alert)
                     ac.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
                         ExerciseModels.models[self.currentIndex].flag = true
                         if let nextFrameIndex = ExerciseModels.getFrameIndex() {
@@ -66,7 +93,8 @@ extension WriteViewController: WriteViewDelegate {
                 }
                 else {
                     // Condition if prediction incorrect
-                    let ac = UIAlertController(title: "Salah", message: "Mungkin tulisanmu kurang apik utawa kurang cocok, sampeyan perlu sinau maneh!", preferredStyle: .alert)
+                    playSound(name: "alert")
+                    let ac = UIAlertController(title: "Salah", message: "Mungkin tulisanmu kurang apik utawa kurang cocok, sampeyan perlu sinau maneh! \nKecocokan mung \(String(format: "%.2f", (prediction.classLabelProbs[self.exerciseFrame.trueLabel] ?? 0) * 100))%", preferredStyle: .alert)
                     ac.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
                         ExerciseModels.models[self.currentIndex].flag = true
                         if let nextFrameIndex = ExerciseModels.getFrameIndex() {

@@ -10,5 +10,7 @@ import UIKit
 
 protocol HomeViewDelegate {
     func sinauButtonTapped(_ view: View, didTapButton button: AnimatingButton)
+    func sinauButtonHighlighted(_ view: View, didHighlightButton button: AnimatingButton)
     func nulisButtonTapped(_ view: View, didTapButton button: AnimatingButton)
+    func nulisButtonHighlighted(_ view: View, didHighlightButton button: AnimatingButton)
 }
