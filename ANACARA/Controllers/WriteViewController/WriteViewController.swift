@@ -94,7 +94,7 @@ extension WriteViewController: WriteViewDelegate {
                 else {
                     // Condition if prediction incorrect
                     playSound(name: "alert")
-                    let ac = UIAlertController(title: "Salah", message: "Mungkin tulisanmu kurang apik utawa kurang cocok, sampeyan perlu sinau maneh!", preferredStyle: .alert)
+                    let ac = UIAlertController(title: "Salah", message: "Mungkin tulisanmu kurang apik utawa kurang cocok, sampeyan perlu sinau maneh! \nKecocokan mung \(String(format: "%.2f", (prediction.classLabelProbs[self.exerciseFrame.trueLabel] ?? 0) * 100))%", preferredStyle: .alert)
                     ac.addAction(UIAlertAction(title: "OK", style: .default, handler: { _ in
                         ExerciseModels.models[self.currentIndex].flag = true
                         if let nextFrameIndex = ExerciseModels.getFrameIndex() {
