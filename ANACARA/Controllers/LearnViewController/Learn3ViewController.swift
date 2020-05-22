@@ -7,8 +7,11 @@
 //
 
 import UIKit
+import AVFoundation
 
 class Learn3ViewController: ViewController<Learn3View> {
+    
+    var player: AVAudioPlayer?
     
     var currentIndex: Int!
     var exerciseFrame: ExerciseFrame!
@@ -30,6 +33,28 @@ class Learn3ViewController: ViewController<Learn3View> {
         screenView.cButton.setTitle(exerciseFrame.choice?[2], for: .normal)
         screenView.dButton.setTitle(exerciseFrame.choice?[3], for: .normal)
     }
+    
+    func playSound(name: String) {
+        guard let url = Bundle.main.url(forResource: name, withExtension: "mp3") else { return }
+
+        do {
+            try AVAudioSession.sharedInstance().setCategory(.playback, mode: .default)
+            try AVAudioSession.sharedInstance().setActive(true)
+
+            /* The following line is required for the player to work on iOS 11. Change the file type accordingly*/
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileType.mp3.rawValue)
+
+            /* iOS 10 and earlier require the following line:
+            player = try AVAudioPlayer(contentsOf: url, fileTypeHint: AVFileTypeMPEGLayer3) */
+
+            guard let player = player else { return }
+
+            player.play()
+
+        } catch let error {
+            print(error.localizedDescription)
+        }
+    }
 }
 
 extension Learn3ViewController: Learn3ViewDelegate {
@@ -42,6 +67,7 @@ extension Learn3ViewController: Learn3ViewDelegate {
         
         if selectedChoice == exerciseFrame.trueLabel {
             // Condition if the answer is correct
+            playSound(name: "clap")
             ExerciseModels.models[currentIndex].flag = true
             if let nextFrameIndex = ExerciseModels.getFrameIndex() {
                 // Condition if next exercise is exist
@@ -56,6 +82,7 @@ extension Learn3ViewController: Learn3ViewDelegate {
         }
         else {
             // Condition if the answer is incorrect
+            playSound(name: "alert")
             let ac = UIAlertController(title: "Salah", message: "Coba dieling-eling maneh ngendi kang sesuai", preferredStyle: .alert)
             ac.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
             present(ac, animated: true, completion: nil)
